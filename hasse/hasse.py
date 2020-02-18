@@ -1,37 +1,26 @@
-import math
 from graphviz import Digraph
-
-get_child_funcs = {
-    'gcd': lambda a, b: math.gcd(a, b),
-    'subseq': lambda a, b: ''.join([x for x in a if x in b]),
-    'substr': lambda a, b: max(
-        [
-            a[i:j]
-            for i in range(len(a))
-            for j in range(i, len(a))
-            if a[i:j] in b
-        ] + [''],
-        key=lambda x: len(x)
-    )
-}
+from genfuncs import genfuncs
 
 
 class Hasse:
     def __init__(self, mode, roots, plot_g=True, plot_tc=True):
+        # init
         self.mode = mode
         self.roots = roots
         self.directory = 'output'
 
+        # calculate
         g = self.get_poset()
         tc = self.get_transitive_closure(g)
 
+        # plot
         if plot_g:
             self.plot(g, f'{self.mode}-complete')
         if plot_tc:
             self.plot(tc, f'{self.mode}-tc')
 
     def get_poset(self):
-        get_child = get_child_funcs[self.mode]
+        genfunc = genfuncs[self.mode]
         stack = self.roots[:]
 
         g = dict()
@@ -40,7 +29,7 @@ class Hasse:
             pop = stack.pop()
             g[pop] = set()
             for n in g:
-                child = get_child(pop, n)
+                child = genfunc(pop, n)
                 if child != n:
                     g[n].add(child)
                 if child != pop:
@@ -83,7 +72,7 @@ if __name__ == '__main__':
     )
 
     Hasse(
-        'subseq',
+        'common',
         ['epinephrine', 'melatonin', 'norepinephrine',
          'triiodothyronine', 'thyroxine', 'dopamine'],
     )
