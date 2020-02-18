@@ -1,25 +1,25 @@
 digraph G {
-	dopamine -> ine
 	dopamine -> dopamin
-	dopamin -> in
+	dopamine -> ine
 	dopamin -> dopami
-	dopami -> dopam
+	dopamin -> in
 	dopami -> i
+	dopami -> dopam
 	dopam -> dopa
 	dopam -> m
 	dopa -> dop
 	dopa -> a
 	dop -> p
 	dop -> do
-	do -> d
 	do -> o
+	do -> d
 	d -> ""
 	thyroxine -> ine
 	thyroxine -> thyroxin
-	thyroxin -> in
 	thyroxin -> thyroxi
-	thyroxi -> thyrox
+	thyroxin -> in
 	thyroxi -> i
+	thyroxi -> thyrox
 	thyrox -> thyro
 	thyro -> thyr
 	thyro -> o
@@ -30,8 +30,8 @@ digraph G {
 	th -> t
 	t -> ""
 	o -> ""
-	in -> n
 	in -> i
+	in -> n
 	i -> ""
 	triiodothyronine -> triiodothyronin
 	triiodothyronine -> ine
@@ -39,26 +39,26 @@ digraph G {
 	triiodothyronin -> in
 	triiodothyroni -> oni
 	triiodothyroni -> triiodothyron
+	triiodothyron -> triiodothyro
 	triiodothyron -> thyro
 	triiodothyron -> on
-	triiodothyron -> triiodothyro
-	triiodothyro -> thyr
 	triiodothyro -> triiodothyr
+	triiodothyro -> thyr
 	triiodothyr -> thy
 	triiodothyr -> triiodothy
-	triiodothy -> th
 	triiodothy -> triiodoth
+	triiodothy -> th
 	triiodoth -> triiodot
 	triiodot -> triiodo
 	triiodot -> do
-	triiodo -> d
 	triiodo -> triiod
+	triiodo -> d
 	triiod -> triio
 	triio -> o
 	triio -> trii
 	trii -> tri
-	tri -> ri
 	tri -> tr
+	tri -> ri
 	tr -> r
 	tr -> t
 	norepinephrine -> norepinephrin
@@ -66,54 +66,54 @@ digraph G {
 	norepinephrin -> epinephrin
 	norepinephri -> norepinephr
 	norepinephri -> epinephri
-	norepinephr -> epinephr
 	norepinephr -> norepineph
+	norepinephr -> epinephr
 	norepineph -> epineph
 	norepineph -> norepinep
-	norepinep -> epinep
 	norepinep -> norepine
+	norepinep -> epinep
 	norepine -> epine
 	norepine -> norepin
-	norepin -> in
 	norepin -> norepi
+	norepin -> in
 	norepin -> epin
 	norepi -> norep
 	norepi -> epi
 	norepi -> i
 	norep -> nore
 	norep -> ep
-	nore -> e
 	nore -> nor
+	nore -> e
 	nor -> r
 	nor -> no
-	no -> o
 	no -> n
+	no -> o
 	n -> ""
-	ri -> i
 	ri -> r
+	ri -> i
 	h -> ""
 	r -> ""
 	ine -> e
 	ine -> in
 	melatonin -> in
-	melatonin -> melatoni
 	melatonin -> oni
+	melatonin -> melatoni
 	melatoni -> melaton
 	melaton -> melato
 	melaton -> on
-	melato -> melat
-	melato -> t
 	melato -> o
-	melat -> mela
+	melato -> t
+	melato -> melat
 	melat -> a
+	melat -> mela
 	mela -> mel
 	mel -> me
 	me -> e
 	me -> m
 	on -> o
 	on -> n
-	oni -> on
 	oni -> i
+	oni -> on
 	e -> ""
 	a -> ""
 	m -> ""
@@ -123,16 +123,16 @@ digraph G {
 	epi -> ep
 	epin -> epi
 	epin -> i
-	epine -> in
 	epine -> epin
-	epinep -> ine
+	epine -> in
 	epinep -> epine
+	epinep -> ine
 	epineph -> epinep
-	epinephr -> h
 	epinephr -> epineph
+	epinephr -> h
 	epinephri -> epinephr
 	epinephri -> r
-	epinephrin -> epinephri
 	epinephrin -> ri
+	epinephrin -> epinephri
 	p -> ""
 }
