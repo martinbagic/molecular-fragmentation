@@ -72,7 +72,7 @@ class Hasse:
         for k, v in g.items():
             for n in v:
                 graph.edge(str(k), str(n))
-        graph.render(filename=filename, format='gv', directory=self.directory)
+        graph.render(filename=filename, format='pdf', directory=self.directory)
 
 
 if __name__ == '__main__':
