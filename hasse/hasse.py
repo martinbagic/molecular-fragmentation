@@ -1,182 +1,113 @@
-import graphviz
-from genfuncs import genfuncs
-from hack import make_mol, get_canonical
-
+import yaml
+import argparse
 import pickle
 
-import os
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
-
-smiles_replacement = dict(zip(
-    '<>:"/\|?*()',
-    'üéâäàåçêëèïîì'
-))
-
-
-def smiles_replace(s):
-    for k, v in smiles_replacement.items():
-        s = s.replace(k, v)
-    return s
-
-
-def atom_count(s):
-    return sum(x.isalpha() for x in s)
+import funcs
+import genfuncs
+from helper import PATH
 
 
 class Hasse:
-    def __init__(self, mode, roots, plot_g=True, plot_tc=True, plot_images=False):
-        # init
-        self.mode = mode
-        self.roots = roots
-        self.directory = 'hasse/output'
-        self.canonics = dict()
+    def __init__(self):
+        '''
+        1) Load arguments. 
+        2a) Load pickled data.
+        2b) Load yaml data and calculate fresh poset and transitive closure.
+        3) Plot data.
+        '''
+        self.set_args()
 
-        self.plot_images = plot_images
+        if self.args.read_pickle:
+            self.read_pickle()
+        else:
+            self.extract_yaml()
+            self.set_poset()
+            self.set_transitive_closure()
 
-        if self.plot_images:
-            self.roots = [self.get_canonical(smiles)
-                          for smiles in self.roots]
+        if self.args.plot_poset:
+            self.plot('poset')
 
-        # calculate
-        g = self.get_poset()
-        tc = self.get_transitive_closure(g)
+        if self.args.plot_tranclo:
+            self.plot('tranclo')
 
-        # with open(f'{self.directory}/pickle-{self.mode}', 'rb') as file:
-        #     tc = pickle.load(file)
+    ### PREPARATION ###
+    def set_args(self):
+        ''' Read arguments from cmd. '''
+        parser = argparse.ArgumentParser('Molecular Fragment Lattice')
 
-        # plot
-        if plot_g:
-            self.plot(g, f'ALL-{self.mode}')
-        if plot_tc:
-            self.plot(tc, f'TRANCLO-{self.mode}')
+        parser.add_argument('instance', help="name of instance", type=str)
+        parser.add_argument(
+            '-p', '--write-pickle', help="pickle calculations", action='store_true')
+        parser.add_argument(
+            '-g', '--plot-poset', help="plot poset", action='store_true')
+        parser.add_argument(
+            '-t', '--plot-tranclo', help="plot transitive closure", action='store_true')
+        parser.add_argument(
+            '-r', '--read-pickle', help="plot only", action='store_true')
 
-    def get_canonical(self, smiles):
-        get_canonical(smiles, self.canonics)
-        return self.canonics[smiles]
+        self.args = parser.parse_args()
 
-    def get_poset(self):
-        genfunc = genfuncs[self.mode]
-        stack = self.roots[:]
+    def extract_yaml(self):
+        ''' Fetch data from yaml about a specific instance. '''
+        with open(PATH('input.yaml'), 'r') as file:
+            yml = yaml.safe_load(file)
 
-        g = dict()
+        instance = yml[self.args.instance]
+        self.mode = instance['mode']
+        self.roots = instance['roots']
 
-        while stack:
-            pop = stack.pop()
-            g[pop] = set()
-            for n in g:
-                if pop == n:
-                    continue
-                child = genfunc(pop, n)
-                if self.plot_images:
-                    child = self.get_canonical(child)
-                    if '.' in child:  # FIX THIS
-                        print(child)
-                        child = max(child.split('.'),
-                                    key=lambda x: atom_count(x))
-                if child != n:
-                    g[n].add(child)
-                if child != pop:
-                    g[pop].add(child)
+    ### CALCULATION ###
+    def set_poset(self):
+        ''' Calculate poset from yaml data. '''
+        self.poset = funcs.get_poset(
+            genfunc=genfuncs.genfuncs[self.mode],
+            roots=self.roots
+        )
+        self.write_pickle('poset')
 
-                if child not in g and child not in stack:
-                    stack.append(child)
+    def set_transitive_closure(self):
+        ''' Calculate transitive closure from poset. '''
+        self.tranclo = funcs.get_transitive_closure(
+            poset=self.poset
+        )
+        self.write_pickle('tranclo')
 
-            print(len(stack), pop)
+    ### PICKLES ###
 
-        return g
+    def read_pickle(self, attr):
+        ''' Read old calculated data. '''
+        filename = f'{self.args.instance}-{attr}.pickle'
+        path = PATH(['pickles', filename])
 
-    def get_transitive_closure(self, G):
-        nodes = list(G.keys())
-        g = {node: [] for node in nodes}
+        with open(path, 'rb') as file:
+            obj = pickle.load(file)
+            setattr(self, attr, obj)
 
-        for start in nodes:
-            for end in G[start]:
-                flag = False
-                for mid in G[start]:
-                    if end in G[mid] and end != mid:
-                        flag = True
-                        break
-                if not flag:
-                    g[start].append(end)
+    def write_pickle(self, attr):
+        ''' Write fresh calculated data. '''
+        if self.args.write_pickle:
+            filename = f'{self.args.instance}-{attr}.pickle'
+            path = PATH(['pickles', filename])
 
-        with open(f'{self.directory}/pickle-{self.mode}', 'wb') as file:
-            pickle.dump(g, file)
+            with open(path, 'wb') as file:
+                obj = getattr(self, attr)
+                pickle.dump(obj, file)
 
-        return g
+    ### PLOTTING ###
 
-    def plot(self, g, filename):
-        graph = graphviz.Digraph()
-        graph.format = 'svg'
-        graph.edge_attr.update(
-            arrowhead='vee',
-            arrowsize='0.5',
-            splines='curved',
+    def plot(self, attr):
+        ''' Plot digraph using graphviz. '''
+        digraph = funcs.get_digraph(
+            g=getattr(self, attr),
+            roots=self.roots,
+            mode=self.mode,
         )
 
-        if self.plot_images:
-            for n in g.keys():
-                name = smiles_replace(str(n))
-                path = f'{self.directory}/{name}.svg'
-                if not name:
-                    name = 'EMPTY'
-                else:
-                    make_mol(str(n), path)
-                shape = 'rect' if n in self.roots else 'none'
-                graph.node(str(n),
-                           label='', shape=shape,
-                           image=f'{name}.svg',)
-        else:
-            for root in self.roots:
-                graph.node(str(root), str(root),
-                           fillcolor='gold', style='filled')
-
-        for k, v in g.items():
-            for n in v:
-                graph.edge(str(k), str(n))
-
-        graph.render(filename=filename, directory=self.directory)
+        digraph.render(
+            filename=f'#{self.args.instance}-{attr}',
+            directory=PATH('plots'),
+        )
 
 
 if __name__ == '__main__':
-
-    # Hasse(
-    #     'gcd',
-    #     [80, 40, 20, 50, 12, 77, 13, 11, 15, 17],
-    # )
-
-    # Hasse(
-    #     'common',
-    #     ['epinephrine', 'melatonin', 'norepinephrine',
-    #      'triiodothyronine', 'thyroxine', 'dopamine',
-    #      'morphine', 'methamphetamine', 'progesterone', 'dihydrotestosterone',
-    #      'banana', 'kazakhstan', 'lettuce', ],
-    # )
-
-    # Hasse(
-    #     'substr',
-    #     ['epinephrine', 'melatonin', 'norepinephrine',
-    #      'triiodothyronine', 'thyroxine', 'dopamine',
-    #      'morphine', 'methamphetamine', 'progesterone', 'dihydrotestosterone',
-    #      'banana', 'kazakhstan', 'lettuce', ],
-    #     plot_g=False,
-    # )
-
-    Hasse(
-        'mcs',
-        [
-            "CNCC(C1=CC(=C(C=C1)O)O)O",  # adrenaline
-            "CN1CCC2=C3C1CC4=C(C3=CC=C2)C(=C(C=C4)O)O",  # apomorphine
-            # "C1CNCC(C2=CC(=C(C(=C21)Cl)O)O)C3=CC=C(C=C3)O",  # fenoldopam
-            # "COC1=C(C=C(C=C1)CCN2CCN(CC2)C3=CC=CC=C3Cl)OC",  # mefeclorazine
-            "CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O",  # morphine
-            # "C1OC2=C(O1)C=C(C=C2)C(C(=N)N)O",  # olmidine
-            "CC12CCC3C(C1CCC2=O)CCC4=C3C=CC(=C4)O",  # estrone
-            "CC12CCC(=O)CC1CCC3C2CCC4(C3CCC4O)C",  # dihydrotestosterone
-            "CC(=O)C1CCC2C1(CCC3C2CCC4=CC(=O)CCC34C)C",  # progesterone
-            "CC(CC1=CC=CC=C1)NC",  # methamphetamine
-
-        ],
-        plot_g=False,
-        plot_images=True,
-    )
+    Hasse()
