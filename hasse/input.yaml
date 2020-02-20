@@ -18,11 +18,11 @@ smiles1: &smiles1 [
     "CN1CCC2=C3C1CC4=C(C3=CC=C2)C(=C(C=C4)O)O", # apomorphine
     "C1CNCC(C2=CC(=C(C(=C21)Cl)O)O)C3=CC=C(C=C3)O", # fenoldopam
     "COC1=C(C=C(C=C1)CCN2CCN(CC2)C3=CC=CC=C3Cl)OC", # mefeclorazine
-    "CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O", # morphine
-    "C1OC2=C(O1)C=C(C=C2)C(C(=N)N)O", # olmidine
-    "CC12CCC3C(C1CCC2=O)CCC4=C3C=CC(=C4)O", # estrone
-    "CC12CCC(=O)CC1CCC3C2CCC4(C3CCC4O)C", # dihydrotestosterone
-    "CC(=O)C1CCC2C1(CCC3C2CCC4=CC(=O)CCC34C)C", # progesterone
+    # "CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O", # morphine
+    # "C1OC2=C(O1)C=C(C=C2)C(C(=N)N)O", # olmidine
+    # "CC12CCC3C(C1CCC2=O)CCC4=C3C=CC(=C4)O", # estrone
+    # "CC12CCC(=O)CC1CCC3C2CCC4(C3CCC4O)C", # dihydrotestosterone
+    # "CC(=O)C1CCC2C1(CCC3C2CCC4=CC(=O)CCC34C)C", # progesterone
   ]
 
 ### INSTANCES ###
@@ -39,11 +39,9 @@ common1:
   roots: *strings1
 
 substr1:
-  node: substr
+  mode: substr
   roots: *strings1
-  plot_g: False
 
 mcs1:
-  node: mcs
+  mode: mcs
   roots: *smiles1
-  plot_g: False
