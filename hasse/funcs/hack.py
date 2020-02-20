@@ -4,6 +4,7 @@ import helper
 
 
 def get_mcs(smiles1, smiles2):
+    ''' Run mcs-cliquer over cmd. '''
 
     with open('temp1.smi', 'w') as f:
         f.write(smiles1)
