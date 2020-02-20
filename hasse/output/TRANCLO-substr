@@ -1,0 +1,100 @@
+digraph {
+	edge [arrowhead=vee arrowsize=0.5 splines=curved]
+	epinephrine [label=epinephrine fillcolor=gold style=filled]
+	melatonin [label=melatonin fillcolor=gold style=filled]
+	norepinephrine [label=norepinephrine fillcolor=gold style=filled]
+	triiodothyronine [label=triiodothyronine fillcolor=gold style=filled]
+	thyroxine [label=thyroxine fillcolor=gold style=filled]
+	dopamine [label=dopamine fillcolor=gold style=filled]
+	morphine [label=morphine fillcolor=gold style=filled]
+	methamphetamine [label=methamphetamine fillcolor=gold style=filled]
+	progesterone [label=progesterone fillcolor=gold style=filled]
+	dihydrotestosterone [label=dihydrotestosterone fillcolor=gold style=filled]
+	banana [label=banana fillcolor=gold style=filled]
+	kazakhstan [label=kazakhstan fillcolor=gold style=filled]
+	lettuce [label=lettuce fillcolor=gold style=filled]
+	lettuce -> et
+	kazakhstan -> ta
+	kazakhstan -> h
+	kazakhstan -> an
+	kazakhstan -> st
+	t -> ""
+	banana -> an
+	an -> a
+	an -> n
+	dihydrotestosterone -> hy
+	dihydrotestosterone -> i
+	dihydrotestosterone -> to
+	dihydrotestosterone -> sterone
+	n -> ""
+	st -> t
+	progesterone -> sterone
+	sterone -> ne
+	sterone -> ron
+	sterone -> st
+	e -> ""
+	methamphetamine -> amine
+	methamphetamine -> me
+	methamphetamine -> th
+	methamphetamine -> et
+	methamphetamine -> ta
+	ne -> e
+	ne -> n
+	a -> ""
+	ta -> t
+	ta -> a
+	et -> t
+	et -> e
+	morphine -> m
+	morphine -> o
+	morphine -> h
+	morphine -> r
+	morphine -> ine
+	ine -> in
+	ine -> ne
+	h -> ""
+	dopamine -> amine
+	dopamine -> o
+	amine -> m
+	amine -> a
+	amine -> ine
+	thyroxine -> ine
+	thyroxine -> thyro
+	ro -> r
+	ro -> o
+	o -> ""
+	r -> ""
+	hy -> h
+	triiodothyronine -> onin
+	triiodothyronine -> ine
+	triiodothyronine -> thyro
+	triiodothyronine -> ron
+	thyro -> hy
+	thyro -> th
+	thyro -> ro
+	th -> t
+	th -> h
+	ron -> on
+	ron -> ro
+	norepinephrine -> o
+	norepinephrine -> epinephrine
+	melatonin -> me
+	melatonin -> onin
+	melatonin -> to
+	melatonin -> a
+	onin -> on
+	onin -> in
+	in -> n
+	in -> i
+	i -> ""
+	me -> m
+	me -> e
+	m -> ""
+	on -> o
+	on -> n
+	to -> t
+	to -> o
+	epinephrine -> h
+	epinephrine -> r
+	epinephrine -> ine
+}

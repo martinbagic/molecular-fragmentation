@@ -1,0 +1,164 @@
+digraph {
+	edge [arrowhead=vee arrowsize=0.5 splines=curved]
+	"CNC(Cc1ccccc1)C" [label="" image="CNCèCc1ccccc1ïC.svg" shape=rect]
+	"O=C1CCC2(C(=C1)CCC1C2CCC2(C1CCC2C(=O)C)C)C" [label="" image="O=C1CCC2èCè=C1ïCCC1C2CCC2èC1CCC2Cè=OïCïCïC.svg" shape=rect]
+	CCCCC [label="" image="CCCCC.svg" shape=none]
+	"O=C1CCC2(C(C1)CCC1C2CCC2(C1CCC2O)C)C" [label="" image="O=C1CCC2èCèC1ïCCC1C2CCC2èC1CCC2OïCïC.svg" shape=rect]
+	"CC(=O)CCC1(C)CCCC2C1CCC1(C2CCC1)C" [label="" image="CCè=OïCCC1èCïCCCC2C1CCC1èC2CCC1ïC.svg" shape=none]
+	"Oc1ccc2c(c1)CCC1C2CCC2(C1CCC2=O)C" [label="" image="Oc1ccc2cèc1ïCCC1C2CCC2èC1CCC2=OïC.svg" shape=rect]
+	"CC12CCCC2C2C(CC1)CCCC2" [label="" image="CC12CCCC2C2CèCC1ïCCCC2.svg" shape=none]
+	"CC1CCC2C(C1C)CCCC2" [label="" image="CC1CCC2CèC1CïCCCC2.svg" shape=none]
+	"CC=C1CCC2C(C1)CCC1(C2CCC1)C" [label="" image="CC=C1CCC2CèC1ïCCC1èC2CCC1ïC.svg" shape=none]
+	"CCCCC=CC" [label="" image="CCCCC=CC.svg" shape=none]
+	CCCc1ccccc1 [label="" image="CCCc1ccccc1.svg" shape=none]
+	"OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O" [label="" image="OC1C=CC2C34C1Oc1c4cèCC2NèCC3ïCïccc1O.svg" shape=rect]
+	"CCCCCCC(CCC)CC" [label="" image="CCCCCCCèCCCïCC.svg" shape=none]
+	CCCCCCCCC [label="" image="CCCCCCCCC.svg" shape=none]
+	CCC1CCCCC1C [label="" image="CCC1CCCCC1C.svg" shape=none]
+	"CCCCC(CC)CC" [label="" image="CCCCCèCCïCC.svg" shape=none]
+	"CCCC(C(CCc1cccc(c1)O)C)CC" [label="" image="CCCCèCèCCc1ccccèc1ïOïCïCC.svg" shape=none]
+	"CCCCC(CCC)C" [label="" image="CCCCCèCCCïC.svg" shape=none]
+	"CCCCC(CC)C" [label="" image="CCCCCèCCïC.svg" shape=none]
+	CCCC [label="" image="CCCC.svg" shape=none]
+	CCCCCC [label="" image="CCCCCC.svg" shape=none]
+	"CCCC(C(CCC(=CC)C)C)CC" [label="" image="CCCCèCèCCCè=CCïCïCïCC.svg" shape=none]
+	"CCCC(C(CCCC=CC)C)CC" [label="" image="CCCCèCèCCCC=CCïCïCC.svg" shape=none]
+	"CCCCCCC(C(CC)O)CC" [label="" image="CCCCCCCèCèCCïOïCC.svg" shape=none]
+	"CCCCCC(CCC)CC" [label="" image="CCCCCCèCCCïCC.svg" shape=none]
+	"CCCCC(C(CCC)CC)C" [label="" image="CCCCCèCèCCCïCCïC.svg" shape=none]
+	"CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O" [label="" image="CN1CCc2c3C1Cc1cccècèc1c3ccc2ïOïO.svg" shape=rect]
+	"CCCCC(=CC)C" [label="" image="CCCCCè=CCïC.svg" shape=none]
+	"CCCC(=CC)C" [label="" image="CCCCè=CCïC.svg" shape=none]
+	"CC=CC" [label="" image="CC=CC.svg" shape=none]
+	CC [label="" image="CC.svg" shape=none]
+	"" [label="" image="EMPTY.svg" shape=none]
+	"CCCCc1cccc(c1)O" [label="" image="CCCCc1ccccèc1ïO.svg" shape=none]
+	"CCCCCC=CC" [label="" image="CCCCCC=CC.svg" shape=none]
+	"CCCC=CC" [label="" image="CCCC=CC.svg" shape=none]
+	CCC [label="" image="CCC.svg" shape=none]
+	"CCCCN(C(Cc1ccc(c(c1)O)O)CC=CC)C" [label="" image="CCCCNèCèCc1cccècèc1ïOïOïCC=CCïC.svg" shape=none]
+	"CCCCc1ccc(cc1)O" [label="" image="CCCCc1cccècc1ïO.svg" shape=none]
+	Oc1ccccc1 [label="" image="Oc1ccccc1.svg" shape=none]
+	CCO [label="" image="CCO.svg" shape=none]
+	c1ccccc1 [label="" image="c1ccccc1.svg" shape=none]
+	"Oc1ccc2c(c1)CCCC2" [label="" image="Oc1ccc2cèc1ïCCCC2.svg" shape=none]
+	C1CCCCC1 [label="" image="C1CCCCC1.svg" shape=none]
+	"CC=C1CCCCC1" [label="" image="CC=C1CCCCC1.svg" shape=none]
+	"CNCC(c1ccc(c(c1)O)O)O" [label="" image="CNCCèc1cccècèc1ïOïOïO.svg" shape=rect]
+	"CCC(=CC)C" [label="" image="CCCè=CCïC.svg" shape=none]
+	"CCC=CC" [label="" image="CCC=CC.svg" shape=none]
+	"CCc1cccc(c1)O" [label="" image="CCc1ccccèc1ïO.svg" shape=none]
+	"CNCCc1ccc(c(c1)O)O" [label="" image="CNCCc1cccècèc1ïOïO.svg" shape=none]
+	CCc1ccccc1 [label="" image="CCc1ccccc1.svg" shape=none]
+	"CCc1ccc(cc1)O" [label="" image="CCc1cccècc1ïO.svg" shape=none]
+	CNCCc1ccccc1 [label="" image="CNCCc1ccccc1.svg" shape=none]
+	"CNC(Cc1ccccc1)C" -> CCCc1ccccc1
+	"CNC(Cc1ccccc1)C" -> CNCCc1ccccc1
+	"O=C1CCC2(C(=C1)CCC1C2CCC2(C1CCC2C(=O)C)C)C" -> "CC=C1CCC2C(C1)CCC1(C2CCC1)C"
+	"O=C1CCC2(C(=C1)CCC1C2CCC2(C1CCC2C(=O)C)C)C" -> "CC(=O)CCC1(C)CCCC2C1CCC1(C2CCC1)C"
+	CCCCC -> CCCC
+	"O=C1CCC2(C(C1)CCC1C2CCC2(C1CCC2O)C)C" -> "CCCCCCC(C(CC)O)CC"
+	"O=C1CCC2(C(C1)CCC1C2CCC2(C1CCC2O)C)C" -> "CC(=O)CCC1(C)CCCC2C1CCC1(C2CCC1)C"
+	"CC(=O)CCC1(C)CCCC2C1CCC1(C2CCC1)C" -> "CC12CCCC2C2C(CC1)CCCC2"
+	"Oc1ccc2c(c1)CCC1C2CCC2(C1CCC2=O)C" -> "CC=C1CCC2C(C1)CCC1(C2CCC1)C"
+	"Oc1ccc2c(c1)CCC1C2CCC2(C1CCC2=O)C" -> "Oc1ccc2c(c1)CCCC2"
+	"Oc1ccc2c(c1)CCC1C2CCC2(C1CCC2=O)C" -> "CCCC(C(CCc1cccc(c1)O)C)CC"
+	"CC12CCCC2C2C(CC1)CCCC2" -> "CC1CCC2C(C1C)CCCC2"
+	"CC12CCCC2C2C(CC1)CCCC2" -> "CCCCCCC(CCC)CC"
+	"CC1CCC2C(C1C)CCCC2" -> "CCCCC(C(CCC)CC)C"
+	"CC1CCC2C(C1C)CCCC2" -> CCC1CCCCC1C
+	"CC=C1CCC2C(C1)CCC1(C2CCC1)C" -> "CC12CCCC2C2C(CC1)CCCC2"
+	"CC=C1CCC2C(C1)CCC1(C2CCC1)C" -> "CCCC(C(CCCC=CC)C)CC"
+	"CC=C1CCC2C(C1)CCC1(C2CCC1)C" -> "CC=C1CCCCC1"
+	"CC=C1CCC2C(C1)CCC1(C2CCC1)C" -> "CCCC(C(CCC(=CC)C)C)CC"
+	"CCCCC=CC" -> CCCCC
+	"CCCCC=CC" -> "CCCC=CC"
+	CCCc1ccccc1 -> CCc1ccccc1
+	CCCc1ccccc1 -> "CCCC(=CC)C"
+	CCCc1ccccc1 -> "CCCCC=CC"
+	"OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O" -> CCC1CCCCC1C
+	"OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O" -> "CCCCCCC(C(CC)O)CC"
+	"OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O" -> "Oc1ccc2c(c1)CCCC2"
+	"OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O" -> "CCCCN(C(Cc1ccc(c(c1)O)O)CC=CC)C"
+	"OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O" -> "CCCC(C(CCc1cccc(c1)O)C)CC"
+	"CCCCCCC(CCC)CC" -> "CCCCCC(CCC)CC"
+	CCCCCCCCC -> CCCCCC
+	CCC1CCCCC1C -> "CCCCC(CCC)C"
+	CCC1CCCCC1C -> C1CCCCC1
+	CCC1CCCCC1C -> "CCCCC(CC)CC"
+	CCC1CCCCC1C -> CCCCCCCCC
+	"CCCCC(CC)CC" -> "CCCCC(CC)C"
+	"CCCC(C(CCc1cccc(c1)O)C)CC" -> "CCCCc1cccc(c1)O"
+	"CCCC(C(CCc1cccc(c1)O)C)CC" -> "CCCC(C(CCCC=CC)C)CC"
+	"CCCC(C(CCc1cccc(c1)O)C)CC" -> "CCCC(C(CCC(=CC)C)C)CC"
+	"CCCCC(CCC)C" -> "CCCCC(CC)C"
+	"CCCCC(CC)C" -> CCCCCC
+	CCCC -> CCC
+	CCCC -> CC
+	CCCCCC -> CCCCC
+	"CCCC(C(CCC(=CC)C)C)CC" -> "CCCCC(C(CCC)CC)C"
+	"CCCC(C(CCC(=CC)C)C)CC" -> "CCCCC(=CC)C"
+	"CCCC(C(CCC(=CC)C)C)CC" -> "CCCCCC=CC"
+	"CCCC(C(CCCC=CC)C)CC" -> "CCCCC(C(CCC)CC)C"
+	"CCCC(C(CCCC=CC)C)CC" -> "CCCCCC=CC"
+	"CCCCCCC(C(CC)O)CC" -> "CCCCCCC(CCC)CC"
+	"CCCCCCC(C(CC)O)CC" -> CCO
+	"CCCCCC(CCC)CC" -> "CCCCC(CCC)C"
+	"CCCCCC(CCC)CC" -> "CCCCC(CC)CC"
+	"CCCCCC(CCC)CC" -> CCCCCCCCC
+	"CCCCC(C(CCC)CC)C" -> "CCCCCC(CCC)CC"
+	"CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O" -> "Oc1ccc2c(c1)CCCC2"
+	"CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O" -> "CCCCN(C(Cc1ccc(c(c1)O)O)CC=CC)C"
+	"CCCCC(=CC)C" -> "CCCC(=CC)C"
+	"CCCCC(=CC)C" -> CCCCCC
+	"CCCCC(=CC)C" -> "CCCCC=CC"
+	"CCCC(=CC)C" -> CCCCC
+	"CCCC(=CC)C" -> "CCC(=CC)C"
+	"CCCC(=CC)C" -> "CCCC=CC"
+	"CC=CC" -> CC
+	CC -> ""
+	"CCCCc1cccc(c1)O" -> CCCc1ccccc1
+	"CCCCc1cccc(c1)O" -> "CCc1cccc(c1)O"
+	"CCCCc1cccc(c1)O" -> "CCCCC(=CC)C"
+	"CCCCc1cccc(c1)O" -> "CCCCCC=CC"
+	"CCCCCC=CC" -> CCCCCC
+	"CCCCCC=CC" -> "CCCCC=CC"
+	"CCCC=CC" -> CCCC
+	"CCCC=CC" -> "CCC=CC"
+	CCC -> ""
+	"CCCCN(C(Cc1ccc(c(c1)O)O)CC=CC)C" -> "CCCCc1cccc(c1)O"
+	"CCCCN(C(Cc1ccc(c(c1)O)O)CC=CC)C" -> "CNCCc1ccc(c(c1)O)O"
+	"CCCCN(C(Cc1ccc(c(c1)O)O)CC=CC)C" -> "CNC(Cc1ccccc1)C"
+	"CCCCN(C(Cc1ccc(c(c1)O)O)CC=CC)C" -> "CCCCc1ccc(cc1)O"
+	"CCCCc1ccc(cc1)O" -> CCCc1ccccc1
+	"CCCCc1ccc(cc1)O" -> "CCc1ccc(cc1)O"
+	"CCCCc1ccc(cc1)O" -> "CCCCC(=CC)C"
+	"CCCCc1ccc(cc1)O" -> "CCCCCC=CC"
+	Oc1ccccc1 -> c1ccccc1
+	Oc1ccccc1 -> CCO
+	CCO -> ""
+	c1ccccc1 -> "CC=CC"
+	"Oc1ccc2c(c1)CCCC2" -> "CCCCc1cccc(c1)O"
+	"Oc1ccc2c(c1)CCCC2" -> "CC=C1CCCCC1"
+	"Oc1ccc2c(c1)CCCC2" -> "CCCCc1ccc(cc1)O"
+	C1CCCCC1 -> CCCCCC
+	"CC=C1CCCCC1" -> C1CCCCC1
+	"CC=C1CCCCC1" -> "CCCCC(=CC)C"
+	"CC=C1CCCCC1" -> "CCCCCC=CC"
+	"CNCC(c1ccc(c(c1)O)O)O" -> "CNCCc1ccc(c(c1)O)O"
+	"CCC(=CC)C" -> CCCC
+	"CCC(=CC)C" -> "CCC=CC"
+	"CCC=CC" -> "CC=CC"
+	"CCC=CC" -> CCC
+	"CCc1cccc(c1)O" -> CCc1ccccc1
+	"CCc1cccc(c1)O" -> Oc1ccccc1
+	"CNCCc1ccc(c(c1)O)O" -> CNCCc1ccccc1
+	"CNCCc1ccc(c(c1)O)O" -> "CCc1cccc(c1)O"
+	"CNCCc1ccc(c(c1)O)O" -> "CCc1ccc(cc1)O"
+	CCc1ccccc1 -> c1ccccc1
+	CCc1ccccc1 -> "CCC(=CC)C"
+	CCc1ccccc1 -> "CCCC=CC"
+	"CCc1ccc(cc1)O" -> CCc1ccccc1
+	"CCc1ccc(cc1)O" -> Oc1ccccc1
+	CNCCc1ccccc1 -> CCc1ccccc1
+}
