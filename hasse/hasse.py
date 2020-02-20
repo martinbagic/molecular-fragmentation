@@ -2,8 +2,7 @@ import yaml
 import argparse
 import pickle
 
-import funcs
-import genfuncs
+from funcs import plot, poset, tranclo, genfuncs
 from helper import PATH
 
 
@@ -59,7 +58,7 @@ class Hasse:
     ### CALCULATION ###
     def set_poset(self):
         ''' Calculate poset from yaml data. '''
-        self.poset = funcs.get_poset(
+        self.poset = poset.get_poset(
             genfunc=genfuncs.genfuncs[self.mode],
             roots=self.roots
         )
@@ -67,7 +66,7 @@ class Hasse:
 
     def set_transitive_closure(self):
         ''' Calculate transitive closure from poset. '''
-        self.tranclo = funcs.get_transitive_closure(
+        self.tranclo = tranclo.get_transitive_closure(
             poset=self.poset
         )
         self.write_pickle('tranclo')
@@ -97,7 +96,7 @@ class Hasse:
 
     def plot(self, attr):
         ''' Plot digraph using graphviz. '''
-        digraph = funcs.get_digraph(
+        digraph = plot.get_digraph(
             g=getattr(self, attr),
             roots=self.roots,
             mode=self.mode,
