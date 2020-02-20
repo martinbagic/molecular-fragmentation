@@ -38,3 +38,9 @@
 ## tasks
 - binding openbabel
 - binding mcs
+
+## issues
+- ./mcs-cliquer-1.0.0/mcs/mcs CC CCCC http://openbabel.org/dev-api/classOpenBabel_1_1OBMol.shtml
+- canonicalization (consider conformation?) - remove chirality @, conformation 
+- mcs gives disconnected graphs 
+- is not binding ok?
