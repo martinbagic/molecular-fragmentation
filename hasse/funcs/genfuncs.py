@@ -1,5 +1,5 @@
 import math
-import hack
+from . import hack
 
 
 def get_greatest_common_divisor(a, b):

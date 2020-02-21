@@ -1,5 +1,5 @@
 import helper
-import hack
+from . import hack
 import graphviz
 
 def get_digraph(g, roots, mode):
