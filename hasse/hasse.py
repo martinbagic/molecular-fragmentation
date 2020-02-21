@@ -104,7 +104,7 @@ class Hasse:
         )
 
         digraph.render(
-            filename=f'#{self.args.instance}-{attr}',
+            filename=f'{self.args.instance}-{attr}',
             directory=PATH('plots'),
         )
 
