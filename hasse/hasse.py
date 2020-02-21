@@ -15,11 +15,12 @@ class Hasse:
         3) Plot data.
         '''
         self.set_args()
+        self.extract_yaml()
 
         if self.args.read_pickle:
-            self.read_pickle()
+            self.read_pickle('poset')
+            self.read_pickle('tranclo')
         else:
-            self.extract_yaml()
             self.set_poset()
             self.set_transitive_closure()
 
@@ -36,7 +37,7 @@ class Hasse:
 
         parser.add_argument('instance', help="name of instance", type=str)
         parser.add_argument(
-            '-p', '--write-pickle', help="pickle calculations", action='store_true')
+            '-w', '--write-pickle', help="pickle calculations", action='store_true')
         parser.add_argument(
             '-g', '--plot-poset', help="plot poset", action='store_true')
         parser.add_argument(
@@ -61,7 +62,7 @@ class Hasse:
         self.poset = poset.get_poset(
             genfunc=genfuncs.genfuncs[self.mode],
             roots=self.roots
-        )
+        )()
         self.write_pickle('poset')
 
     def set_transitive_closure(self):
