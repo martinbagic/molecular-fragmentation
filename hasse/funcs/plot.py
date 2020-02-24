@@ -1,6 +1,7 @@
 import helper
 from . import hack
 import graphviz
+import os
 
 
 def get_digraph(g, roots, mode):
@@ -53,17 +54,18 @@ def add_images(graph, g, roots):
 
     for node in g.keys():
         if node:
-            path = helper.PATH(['plots', 'molecules', f'{legalize(node)}.svg'])
+            filename = f'{legalize(node)}.svg'
+            path = helper.PATH(['plots', 'molecules', filename])
             hack.draw_smiles(
                 smiles=node,
                 path=path,
             )
         else:
-            path = helper.PATH(['plots', 'molecules', '_empty.svg'])
+            filename = '_empty.svg'
 
         graph.node(
             node,
             label='',
-            image=path,
+            image=os.path.join('molecules', filename),
             shape='rect' if node in roots else 'none',
         )
