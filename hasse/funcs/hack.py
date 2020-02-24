@@ -33,12 +33,28 @@ def draw_smiles(smiles, path):
     subprocess.run(s, shell=True)
 
 
-def get_canonical(smiles, canonics):
+class Canonicalizer:
+    def __init__(self):
+        self.pairs = dict()
 
-    if smiles not in canonics:
-        s = f'obabel -:"{smiles}" -ocan'
-        r = subprocess.run(s, stdout=subprocess.PIPE, shell=True)
-        stdout = r.stdout.decode('utf8')
-        canonical_smiles = stdout.strip()
-        canonical_smiles = canonical_smiles.replace('/', '').replace('\\', '')
-        canonics[smiles] = canonical_smiles
+    def __call__(self, smiles):
+        if smiles not in self.pairs:
+
+            s = f'obabel -:"{smiles}" -ocan'
+            r = subprocess.run(s, stdout=subprocess.PIPE, shell=True)
+            stdout = r.stdout.decode('ascii')
+            canonical_smiles = stdout.strip()
+            canonical_smiles = canonical_smiles.replace(
+                '/', '').replace('\\', '').replace('@', '')
+
+            biggest_smiles = self.biggest(canonical_smiles)
+
+            self.pairs[smiles] = self.biggest(biggest_smiles)
+
+        return self.pairs[smiles]
+
+    def biggest(self, smiles):
+        return max(
+            smiles.split('.'),
+            key=lambda s: sum(c.isalpha() for c in s)
+        )

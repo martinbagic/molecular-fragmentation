@@ -2,7 +2,7 @@ import yaml
 import argparse
 import pickle
 
-from funcs import plot, poset, tranclo, genfuncs
+from funcs import plot, poset, tranclo, genfuncs, hack
 from helper import PATH
 
 
@@ -56,12 +56,19 @@ class Hasse:
         self.mode = instance['mode']
         self.roots = instance['roots']
 
+        if 'canonicalize' in instance:
+            self.canonicalizer = hack.Canonicalizer()
+            self.roots = [self.canonicalizer(root) for root in self.roots]
+        else:
+            self.canonicalizer = None
+
     ### CALCULATION ###
     def set_poset(self):
         ''' Calculate poset from yaml data. '''
-        self.poset = poset.get_poset(
+        self.poset = poset.Poset(
             genfunc=genfuncs.genfuncs[self.mode],
-            roots=self.roots
+            roots=self.roots,
+            canonicalizer=self.canonicalizer,
         )()
         self.write_pickle('poset')
 
