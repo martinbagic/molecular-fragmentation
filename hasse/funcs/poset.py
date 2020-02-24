@@ -1,6 +1,7 @@
 from . import hack
 
 from collections import defaultdict
+import logging
 
 
 class Poset:
@@ -19,7 +20,7 @@ class Poset:
         seen = set()
 
         while stack:
-            print('STACK LEN = ', len(stack))
+            logging.debug(f'stack cardinality is {len(stack)}')
             a = stack.pop()
             seen.add(a)
 

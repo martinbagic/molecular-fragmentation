@@ -4,6 +4,7 @@ import pickle
 
 from funcs import plot, poset, tranclo, genfuncs, hack
 from helper import PATH
+import logging
 
 
 class Hasse:
@@ -15,6 +16,7 @@ class Hasse:
         3) Plot data.
         '''
         self.set_args()
+        self.set_logging()
         self.extract_yaml()
 
         if self.args.read_pickle:
@@ -31,19 +33,34 @@ class Hasse:
             self.plot('tranclo')
 
     ### PREPARATION ###
+
+    def set_logging(self):
+        if self.args.log:
+            logging.basicConfig(
+                level=logging.DEBUG,
+                format='%(asctime)s --- %(levelname)s ::: %(message)s',
+                datefmt="%H:%M:%S",
+            )
+
     def set_args(self):
         ''' Read arguments from cmd. '''
         parser = argparse.ArgumentParser('Molecular Fragment Lattice')
 
         parser.add_argument('instance', help="name of instance", type=str)
+
+        parser.add_argument(
+            '-r', '--read-pickle', help="plot only", action='store_true')
         parser.add_argument(
             '-w', '--write-pickle', help="pickle calculations", action='store_true')
+
         parser.add_argument(
             '-g', '--plot-poset', help="plot poset", action='store_true')
         parser.add_argument(
             '-t', '--plot-tranclo', help="plot transitive closure", action='store_true')
+
         parser.add_argument(
-            '-r', '--read-pickle', help="plot only", action='store_true')
+            '-l', '--log', help="enable logging", action='store_true'
+        )
 
         self.args = parser.parse_args()
 

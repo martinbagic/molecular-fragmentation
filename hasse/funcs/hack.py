@@ -1,6 +1,7 @@
 import os
 import subprocess
 import helper
+import logging
 
 
 def get_mcs(smiles1, smiles2):
@@ -19,7 +20,7 @@ def get_mcs(smiles1, smiles2):
     try:
         smiles3 = stdout.split()[-2]
     except:
-        print('no mcs', smiles1, smiles2)
+        logging.error(f'no MCS for "{smiles1}" and "{smiles}"')
         smiles3 = ''
 
     os.remove('temp1.smi')
