@@ -30,7 +30,7 @@ def get_mcs(smiles1, smiles2):
 
 def draw_smiles(smiles, path):
     s = f'obabel -:"{smiles}" -o svg > "{path}"'
-    subprocess.run(s, shell=True)
+    subprocess.run(s, shell=True, stderr=subprocess.DEVNULL)
 
 
 class Canonicalizer:
@@ -41,12 +41,12 @@ class Canonicalizer:
         if smiles not in self.pairs:
 
             s = f'obabel -:"{smiles}" -ocan'
-            r = subprocess.run(s, stdout=subprocess.PIPE, shell=True)
+            r = subprocess.run(s, stdout=subprocess.PIPE, shell=True, stderr=subprocess.DEVNULL)
             stdout = r.stdout.decode('ascii')
             canonical_smiles = stdout.strip()
             canonical_smiles = canonical_smiles.replace(
                 '/', '').replace('\\', '').replace('@', '')
-
+            
             biggest_smiles = self.biggest(canonical_smiles)
 
             self.pairs[smiles] = self.biggest(biggest_smiles)
