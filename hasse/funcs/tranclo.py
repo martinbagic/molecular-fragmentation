@@ -1,7 +1,7 @@
 def get_transitive_closure(poset):
     tc = {node: [] for node in poset.keys()}
 
-    for start in poset.keys():
+    for start in list(poset.keys()):
         for end in poset[start]:
             flag = False
             for mid in poset[start]:
