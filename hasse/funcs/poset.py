@@ -11,7 +11,7 @@ class Poset:
         self.canonicalizer = canonicalizer
 
     def __call__(self):
-        stack = set(self.roots)
+        stack = set(self.roots)  # set of new nodes to be added to the graph
 
         P = defaultdict(set)
         C = defaultdict(set)
@@ -21,15 +21,17 @@ class Poset:
 
         while stack:
             logging.debug(f'stack cardinality is {len(stack)}')
-            a = stack.pop()
+
+            a = stack.pop()  # new node (a)
             seen.add(a)
 
+            # set of nodes whose relationship with new node (a) is to be investigated
             resolve = seen - {a}
 
             while resolve:
                 b = resolve.pop()
 
-                if b in S[a] or b in P[a] or b in C[a]:  # already explored
+                if b in S[a] or b in P[a] or b in C[a]:  # relationship already investigated
                     continue
 
                 x = self.genfunc(a, b)
@@ -75,7 +77,5 @@ class Poset:
                     P[x].add(b)
 
                     stack.add(x)  # new node, need to investigate
-
-        print(seen)
 
         return C
