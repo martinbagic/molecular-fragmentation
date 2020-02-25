@@ -45,14 +45,15 @@ def add_text(graph, roots):
 def add_images(graph, g, roots):
 
     def legalize(name):
-        s1 = '<>:"/\|?*()'
-        s2 = 'üéâäàåçêëèïîì'
+        s1 = '()'
+        s2 = '⚪⚫üéâäàåçêëèïîì'
         replacements = dict(zip(s1, s2))
         for a, b in replacements.items():
             name = name.replace(a, b)
         return name
 
-    for node in g.keys():
+    nodes = {g.keys()} | {x for l in g.values() for x in l}
+    for node in nodes:
         if node:
             filename = f'{legalize(node)}.svg'
             path = helper.PATH(['plots', 'molecules', filename])
