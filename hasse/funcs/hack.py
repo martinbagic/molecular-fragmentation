@@ -50,6 +50,8 @@ class Canonicalizer:
                 '/', '').replace('\\', '').replace('@', '')
 
             biggest_smiles = self.biggest(canonical_smiles)
+            if canonical_smiles != biggest_smiles:
+                logging.debug(f'splitting "{canonical_smiles}" into "{biggest_smiles}"')
 
             self.pairs[smiles] = biggest_smiles
 
