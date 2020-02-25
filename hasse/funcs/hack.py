@@ -20,7 +20,7 @@ def get_mcs(smiles1, smiles2):
     try:
         smiles3 = stdout.split()[-2]
     except:
-        logging.error(f'no MCS for "{smiles1}" and "{smiles}"')
+        logging.error(f'no MCS for "{smiles1}" and "{smiles2}"')
         smiles3 = ''
 
     os.remove('temp1.smi')
@@ -42,15 +42,16 @@ class Canonicalizer:
         if smiles not in self.pairs:
 
             s = f'obabel -:"{smiles}" -ocan'
-            r = subprocess.run(s, stdout=subprocess.PIPE, shell=True, stderr=subprocess.DEVNULL)
+            r = subprocess.run(s, stdout=subprocess.PIPE,
+                               shell=True, stderr=subprocess.DEVNULL)
             stdout = r.stdout.decode('ascii')
             canonical_smiles = stdout.strip()
             canonical_smiles = canonical_smiles.replace(
                 '/', '').replace('\\', '').replace('@', '')
-            
+
             biggest_smiles = self.biggest(canonical_smiles)
 
-            self.pairs[smiles] = self.biggest(biggest_smiles)
+            self.pairs[smiles] = biggest_smiles
 
         return self.pairs[smiles]
 
