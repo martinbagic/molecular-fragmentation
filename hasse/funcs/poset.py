@@ -20,7 +20,7 @@ class Poset:
         seen = set()
 
         while stack:
-            logging.debug(f'stack cardinality is {len(stack)}')
+            logging.debug(f'{len(seen):^3} / {len(stack)+len(seen):^3}')
 
             a = stack.pop()  # new node (a)
             seen.add(a)
