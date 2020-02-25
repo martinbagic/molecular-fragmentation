@@ -52,7 +52,7 @@ def add_images(graph, g, roots):
             name = name.replace(a, b)
         return name
 
-    nodes = {g.keys()} | {x for l in g.values() for x in l}
+    nodes = set(g.keys()) | {x for l in g.values() for x in l}
     for node in nodes:
         if node:
             filename = f'{legalize(node)}.svg'
