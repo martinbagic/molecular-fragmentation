@@ -11,25 +11,24 @@ class Poset:
         self.canonicalizer = canonicalizer
 
     def __call__(self):
-        stack = set(self.roots)  # set of new nodes to be added to the graph
+
+        to_add = self.roots[:]  # set of new nodes to be added to the graph
 
         P = defaultdict(set)
         C = defaultdict(set)
         S = defaultdict(set)
 
-        seen = set()
+        added = []
 
-        while stack:
-            logging.debug(f'{len(seen):^3} / {len(stack)+len(seen):^3}')
+        while to_add:
+            logging.debug(f'{len(added):^3} / {len(to_add)+len(added):^3}')
 
-            a = stack.pop()  # new node (a)
-            seen.add(a)
+            a = to_add.pop(0)  # new node (a)
 
-            # set of nodes whose relationship with new node (a) is to be investigated
-            resolve = seen - {a}
+            resolve = added[:]  # explore rel with new node
 
             while resolve:
-                b = resolve.pop()
+                b = resolve.pop(0)
 
                 if b in S[a] or b in P[a] or b in C[a]:  # relationship already investigated
                     continue
@@ -46,12 +45,14 @@ class Poset:
                     for p in P[b]:  # all parents of b are parents of a
                         P[a].add(p)
                         C[p].add(a)
-                        resolve -= {p}
+                        if p in resolve:
+                            resolve.remove(p)
 
                     for c in C[a]:  # all children of a are children of b
                         P[c].add(b)
                         C[b].add(c)
-                        resolve -= {c}
+                        if c in resolve:
+                            resolve.remove(c)
 
                 elif b == x:  # a > x = b; a is a parent of b
                     C[a].add(b)
@@ -60,12 +61,14 @@ class Poset:
                     for p in P[a]:  # all parents of a are parents of b
                         P[b].add(p)
                         C[p].add(b)
-                        resolve -= {p}
+                        if p in resolve:
+                            resolve.remove(p)
 
                     for c in C[b]:  # all children of b are children of a
                         P[c].add(a)
                         C[a].add(c)
-                        resolve -= {c}
+                        if p in resolve:
+                            resolve.remove(c)
 
                 else:  # a > x < b; a and b are siblings and x their child
                     S[a].add(b)
@@ -76,6 +79,10 @@ class Poset:
                     P[x].add(a)
                     P[x].add(b)
 
-                    stack.add(x)  # new node, need to investigate
+                    if x not in to_add:  # if node is new, add to graph
+                        to_add.append(x)
+                        print(a,b,x)
+
+            added.append(a)
 
         return C
