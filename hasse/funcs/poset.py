@@ -33,55 +33,59 @@ class Poset:
                 if b in S[a] or b in P[a] or b in C[a]:  # relationship already investigated
                     continue
 
-                x = self.genfunc(a, b)
+                xs = self.genfunc(a, b)
 
                 if self.canonicalizer:
-                    x = self.canonicalizer(x)
+                    xs = [self.canonicalizer(x) for x in set(xs)]
+                    # maxlen = max(len(x) for x in xs)
+                    # xs = [x for x in xs if len(x) == maxlen]
 
-                if a == x:  # a = x < b; b is a parent of a
-                    C[b].add(a)
-                    P[a].add(b)
+                for x in xs:
 
-                    for p in P[b]:  # all parents of b are parents of a
-                        P[a].add(p)
-                        C[p].add(a)
-                        if p in resolve:
-                            resolve.remove(p)
+                    if a == x:  # a = x < b; b is a parent of a
+                        C[b].add(a)
+                        P[a].add(b)
 
-                    for c in C[a]:  # all children of a are children of b
-                        P[c].add(b)
-                        C[b].add(c)
-                        if c in resolve:
-                            resolve.remove(c)
+                        for p in P[b]:  # all parents of b are parents of a
+                            P[a].add(p)
+                            C[p].add(a)
+                            if p in resolve:
+                                resolve.remove(p)
 
-                elif b == x:  # a > x = b; a is a parent of b
-                    C[a].add(b)
-                    P[b].add(a)
+                        for c in C[a]:  # all children of a are children of b
+                            P[c].add(b)
+                            C[b].add(c)
+                            if c in resolve:
+                                resolve.remove(c)
 
-                    for p in P[a]:  # all parents of a are parents of b
-                        P[b].add(p)
-                        C[p].add(b)
-                        if p in resolve:
-                            resolve.remove(p)
+                    elif b == x:  # a > x = b; a is a parent of b
+                        C[a].add(b)
+                        P[b].add(a)
 
-                    for c in C[b]:  # all children of b are children of a
-                        P[c].add(a)
-                        C[a].add(c)
-                        if p in resolve:
-                            resolve.remove(c)
+                        for p in P[a]:  # all parents of a are parents of b
+                            P[b].add(p)
+                            C[p].add(b)
+                            if p in resolve:
+                                resolve.remove(p)
 
-                else:  # a > x < b; a and b are siblings and x their child
-                    S[a].add(b)
-                    S[b].add(a)
+                        for c in C[b]:  # all children of b are children of a
+                            P[c].add(a)
+                            C[a].add(c)
+                            if p in resolve:
+                                resolve.remove(c)
 
-                    C[a].add(x)
-                    C[b].add(x)
-                    P[x].add(a)
-                    P[x].add(b)
+                    else:  # a > x < b; a and b are siblings and x their child
+                        S[a].add(b)
+                        S[b].add(a)
 
-                    if x not in to_add:  # if node is new, add to graph
-                        to_add.append(x)
-                        print(a,b,x)
+                        C[a].add(x)
+                        C[b].add(x)
+                        P[x].add(a)
+                        P[x].add(b)
+
+                        if x not in to_add:  # if node is new, add to graph
+                            to_add.append(x)
+                            print(a, b, x)
 
             added.append(a)
 
