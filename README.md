@@ -1,5 +1,10 @@
 # UE Cheminf
 
+## tasks 25 Feb 2020
+
+- [ ] make cliquer filter isomorphic solutions
+- [ ] make cliquer return all mcs solutions which are disconnected
+
 ## tasks
 
 - [ ] use openbabel python library
@@ -34,13 +39,14 @@
 - draw molecule `obabel -:"C12C(CCC1)CCCC2" -o svg > mol.svg`
 
 ### observations
+
 - aromatic bonds are considered single or double
 - mcs is wrong for CC + ?
 - mcs yields disconnected graphs
 - one issue is that smiles are not canonicalized stably (one reason is volatile interpretation of aromatic bonds)
 
-
 ### issues
+
 1. getting different outputs for same input (running `python3 hasse/hasse.py -t mcs1`)
    - all three examples are too big, i.e. there are extra molecules being generated
    - inconsistent children (looak at fenoldopam and apomorphine in `small-but-still-too-big` and `too-big1`)
