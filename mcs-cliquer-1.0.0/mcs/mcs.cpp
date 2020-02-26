@@ -64,7 +64,7 @@ int main(int argc,char **argv)
   unsigned int bonds2 = mol2.NumBonds();
   double max_achievable_sim = (double) min(bonds1,bonds2) / max(bonds1, bonds2);
    
-  OBMol result = mces_cliquer(mol1,mol2);
+  OBMol result = mcis_cliquer(mol1,mol2); // martin
   unsigned int bondsm = result.NumBonds();
   double similarity = (double) bondsm / (bonds1+bonds2-bondsm);
 
