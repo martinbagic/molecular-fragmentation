@@ -10,6 +10,7 @@
 #include <utility>
 #include <set>
 #include <boost/unordered_map.hpp>
+#include <algorithm>
 
 #include <openbabel/mol.h>
 #include <openbabel/obconversion.h>
@@ -80,13 +81,21 @@ bool are_isomorphic(OBMol mol1, OBMol mol2)
 	return result;
 }
 
+// martin
+string stringify(OBMol result)
+{
+	OBConversion conv;
+	conv.SetOutFormat("SMI");
+	conv.Read(&result);
+	string str = conv.WriteString(&result, true);
+	return str;
+}
+
 int main(int argc, char **argv)
 {
 	// init
 	OBConversion obconv1, obconv2;
 	OBMol mol1, mol2;
-
-	obErrorLog.StopLogging();
 
 	if (argc < 3)
 	{
@@ -94,14 +103,9 @@ int main(int argc, char **argv)
 		return 1;
 	}
 
-	// obconv1.SetInFormat(obconv1.FormatFromExt(argv[1]));
-	// obconv2.SetInFormat(obconv2.FormatFromExt(argv[2]));
-
 	obconv1.SetInFormat("SMI");
 	obconv2.SetInFormat("SMI");
 
-	// bool notatend1 = obconv1.ReadFile(&mol1, argv[1]);
-	// bool notatend2 = obconv2.ReadFile(&mol2, argv[2]);
 	bool notatend1 = obconv1.ReadString(&mol1, argv[1]);
 	bool notatend2 = obconv1.ReadString(&mol2, argv[2]);
 	if (!notatend1 || !notatend2)
@@ -114,20 +118,18 @@ int main(int argc, char **argv)
 	double max_achievable_sim = (double)min(bonds1, bonds2) / max(bonds1, bonds2);
 
 	// calculate
-	// OBMol result = mcis_cliquer(mol1, mol2);
 	vector<OBMol> results = mcis_cliquer_vector(mol1, mol2);
-	OBConversion conv;
-	conv.SetOutFormat("SMI");
 
-	// cout << endl;
-	// cout << "martin " << are_isomorphic(result, result) << endl;
-	// cout << "martin " << are_isomorphic(result, mol1) << endl;
-	// cout << "martin " << are_isomorphic(result, mol2) << endl;
-	// cout << "martin " << are_isomorphic(mol1, mol2) << endl;
+	// get unique strings
+
+	// set<string> smiles;
+	// for (OBMol result : results)
+	// 	smiles.insert(stringify(result));
+	// for (string s : smiles) cout << s;
 
 	// filter
 
-	// cout << "1. size = " << results.size() << "!!!" << endl;
+	// cout << "1. size = " << smiles.size() << "!!!" << endl;
 	// for (auto iter = results.begin(); iter != results.end(); iter++)
 	// {
 	// 	for (auto next = std::next(iter); next != results.end();)
@@ -140,9 +142,13 @@ int main(int argc, char **argv)
 	// 			next++;
 	// 	}
 	// }
-	cout << "2. size = " << results.size() << "!!!" << endl;
+	cout << endl << "size = " << results.size() << endl;
 
 	// read and print
+
+	OBConversion conv;
+	conv.SetOutFormat("SMI");
+
 	for (OBMol result : results)
 	{
 		conv.Read(&result);
@@ -221,8 +227,7 @@ void run_cliquer_martin(const graph &P, const neighborhood &N, vector<graph> &MM
 			}
 		}
 
-		// flamm -- new edge_exists
-
+		// flamm -- new edge_exists (copied)
 		if (edge_exists)
 		{
 			int n;
@@ -248,53 +253,53 @@ void run_cliquer_martin(const graph &P, const neighborhood &N, vector<graph> &MM
 	}
 }
 
-void run_cliquer(const graph &P, const neighborhood &N, graph &M)
-{
-	if (P.size() > 0)
-	{
-		graph_t *g = graph_new(P.size());
+// void run_cliquer(const graph &P, const neighborhood &N, graph &M)
+// {
+// 	if (P.size() > 0)
+// 	{
+// 		graph_t *g = graph_new(P.size());
 
-		boost::unordered_map<uv, int> uv_to_int;
-		vector<uv> int_to_uv;
-		int n = 0;
-		for (graph::iterator i = P.begin(); i != P.end(); i++)
-		{
-			uv_to_int[*i] = n++;
-			int_to_uv.push_back(*i);
-		}
+// 		boost::unordered_map<uv, int> uv_to_int;
+// 		vector<uv> int_to_uv;
+// 		int n = 0;
+// 		for (graph::iterator i = P.begin(); i != P.end(); i++)
+// 		{
+// 			uv_to_int[*i] = n++;
+// 			int_to_uv.push_back(*i);
+// 		}
 
-		bool edge_exists = false;
-		for (graph::iterator i = P.begin(); i != P.end(); i++)
-		{
-			neighborhood::const_iterator ni = N.find(*i);
-			if (ni == N.end())
-				continue;
-			graph E = ni->second;
-			int first = uv_to_int[*i];
-			for (graph::iterator j = E.begin(); j != E.end(); j++)
-			{
-				int second = uv_to_int[*j];
-				if (second > first)
-				{
-					GRAPH_ADD_EDGE(g, first, second);
-					edge_exists = true;
-				}
-			}
-		}
-		if (edge_exists)
-		{
-			set_t s = clique_find_single(g, 0, 0, TRUE, NULL);
-			for (int i = 0; i < SET_MAX_SIZE(s); i++)
-				if (SET_CONTAINS(s, i))
-				{
-					uv u = int_to_uv[i];
-					M.insert(u);
-				}
-			set_free(s);
-		}
-		graph_free(g);
-	}
-}
+// 		bool edge_exists = false;
+// 		for (graph::iterator i = P.begin(); i != P.end(); i++)
+// 		{
+// 			neighborhood::const_iterator ni = N.find(*i);
+// 			if (ni == N.end())
+// 				continue;
+// 			graph E = ni->second;
+// 			int first = uv_to_int[*i];
+// 			for (graph::iterator j = E.begin(); j != E.end(); j++)
+// 			{
+// 				int second = uv_to_int[*j];
+// 				if (second > first)
+// 				{
+// 					GRAPH_ADD_EDGE(g, first, second);
+// 					edge_exists = true;
+// 				}
+// 			}
+// 		}
+// 		if (edge_exists)
+// 		{
+// 			set_t s = clique_find_single(g, 0, 0, TRUE, NULL);
+// 			for (int i = 0; i < SET_MAX_SIZE(s); i++)
+// 				if (SET_CONTAINS(s, i))
+// 				{
+// 					uv u = int_to_uv[i];
+// 					M.insert(u);
+// 				}
+// 			set_free(s);
+// 		}
+// 		graph_free(g);
+// 	}
+// }
 
 void create_modular_product_mces(OBMol &mol1, OBMol &mol2, graph &V, neighborhood &N)
 {
