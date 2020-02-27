@@ -9,309 +9,309 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1321)">
 <title>%3</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-1321 1507,-1321 1507,4 -4,4"/>
-<!-- CN(C(CC=CC)CC=CC=C(CO)O)CC -->
-<g id="node1" class="node">
-<title>CN(C(CC=CC)CC=CC=C(CO)O)CC</title>
-<image xlink:href="molecules/CN⚪C⚪CC=CC⚫CC=CC=C⚪CO⚫O⚫CC.svg" width="269px" height="152px" preserveAspectRatio="xMinYMin meet" x="222.5" y="-1001.5"/>
-</g>
-<!-- CNCCC=CC=C(CO)O -->
-<g id="node6" class="node">
-<title>CNCCC=CC=C(CO)O</title>
-<image xlink:href="molecules/CNCCC=CC=C⚪CO⚫O.svg" width="269px" height="107px" preserveAspectRatio="xMinYMin meet" x="449.5" y="-731"/>
-</g>
-<!-- CN(C(CC=CC)CC=CC=C(CO)O)CC&#45;&gt;CNCCC=CC=C(CO)O -->
-<g id="edge17" class="edge">
-<title>CN(C(CC=CC)CC=CC=C(CO)O)CC&#45;&gt;CNCCC=CC=C(CO)O</title>
-<path fill="none" stroke="#000000" d="M426.6502,-849.4064C460.3388,-812.6012 500.1179,-769.1421 531.2508,-735.129"/>
-<polygon fill="#000000" stroke="#000000" points="535.0037,-731.029 533.2874,-736.2365 533.3157,-732.8732 531.6277,-734.7173 531.6277,-734.7173 531.6277,-734.7173 533.3157,-732.8732 529.968,-733.1981 535.0037,-731.029 535.0037,-731.029"/>
-</g>
-<!-- NCCC=CC=CCO -->
-<g id="node2" class="node">
-<title>NCCC=CC=CCO</title>
-<image xlink:href="molecules/NCCC=CC=CCO.svg" width="243px" height="107px" preserveAspectRatio="xMinYMin meet" x="505.5" y="-280"/>
-</g>
-<!-- NCCC=CC=CC -->
-<g id="node3" class="node">
-<title>NCCC=CC=CC</title>
-<image xlink:href="molecules/NCCC=CC=CC.svg" width="218px" height="107px" preserveAspectRatio="xMinYMin meet" x="767" y="-107"/>
-</g>
-<!-- NCCC=CC=CCO&#45;&gt;NCCC=CC=CC -->
-<g id="edge32" class="edge">
-<title>NCCC=CC=CCO&#45;&gt;NCCC=CC=CC</title>
-<path fill="none" stroke="#000000" d="M704.0799,-172.9465C732.8043,-152.9894 765.488,-130.2814 794.5889,-110.0627"/>
-<polygon fill="#000000" stroke="#000000" points="798.8556,-107.0983 796.0332,-111.799 796.8025,-108.5248 794.7494,-109.9512 794.7494,-109.9512 794.7494,-109.9512 796.8025,-108.5248 793.4656,-108.1034 798.8556,-107.0983 798.8556,-107.0983"/>
-</g>
 <!-- NCCc1ccc(cc1)OC -->
-<g id="node4" class="node">
+<g id="node1" class="node">
 <title>NCCc1ccc(cc1)OC</title>
-<image xlink:href="molecules/NCCc1ccc⚪cc1⚫OC.svg" width="140px" height="212px" preserveAspectRatio="xMinYMin meet" x="1156" y="-1031.5"/>
+<image xlink:href="molecules/NCCc1ccc⚪cc1⚫OC.svg" width="140px" height="212px" preserveAspectRatio="xMinYMin meet" x="140" y="-1031.5"/>
 </g>
 <!-- NCCc1ccc(cc1)O -->
-<g id="node19" class="node">
+<g id="node14" class="node">
 <title>NCCc1ccc(cc1)O</title>
-<image xlink:href="molecules/NCCc1ccc⚪cc1⚫O.svg" width="140px" height="197px" preserveAspectRatio="xMinYMin meet" x="996" y="-543"/>
+<image xlink:href="molecules/NCCc1ccc⚪cc1⚫O.svg" width="140px" height="197px" preserveAspectRatio="xMinYMin meet" x="320" y="-543"/>
 </g>
 <!-- NCCc1ccc(cc1)OC&#45;&gt;NCCc1ccc(cc1)O -->
 <g id="edge22" class="edge">
 <title>NCCc1ccc(cc1)OC&#45;&gt;NCCc1ccc(cc1)O</title>
-<path fill="none" stroke="#000000" d="M1190.6892,-819.347C1163.8006,-738.5129 1126.9948,-627.8655 1100.347,-547.7556"/>
-<polygon fill="#000000" stroke="#000000" points="1098.7667,-543.005 1102.48,-547.0392 1099.5559,-545.3772 1100.345,-547.7494 1100.345,-547.7494 1100.345,-547.7494 1099.5559,-545.3772 1098.21,-548.4597 1098.7667,-543.005 1098.7667,-543.005"/>
-</g>
-<!-- NC(=N)C(c1ccc2c(c1)OCO2)O -->
-<g id="node5" class="node">
-<title>NC(=N)C(c1ccc2c(c1)OCO2)O</title>
-<polygon fill="none" stroke="#000000" points="1503,-1279.5 1291,-1279.5 1291,-1112.5 1503,-1112.5 1503,-1279.5"/>
-<image xlink:href="molecules/NC⚪=N⚫C⚪c1ccc2c⚪c1⚫OCO2⚫O.svg" width="212px" height="167px" preserveAspectRatio="xMinYMin meet" x="1291" y="-1279.5"/>
-</g>
-<!-- NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCCc1ccc(cc1)OC -->
-<g id="edge12" class="edge">
-<title>NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCCc1ccc(cc1)OC</title>
-<path fill="none" stroke="#000000" d="M1344.0656,-1112.2646C1328.8589,-1088.2096 1312.0364,-1061.5986 1295.9708,-1036.1849"/>
-<polygon fill="#000000" stroke="#000000" points="1293.1907,-1031.787 1297.7643,-1034.811 1294.5266,-1033.9002 1295.8624,-1036.0133 1295.8624,-1036.0133 1295.8624,-1036.0133 1294.5266,-1033.9002 1293.9606,-1037.2156 1293.1907,-1031.787 1293.1907,-1031.787"/>
-</g>
-<!-- NCC(c1ccc(c(c1)O)O)O -->
-<g id="node18" class="node">
-<title>NCC(c1ccc(c(c1)O)O)O</title>
-<image xlink:href="molecules/NCC⚪c1ccc⚪c⚪c1⚫O⚫O⚫O.svg" width="140px" height="227px" preserveAspectRatio="xMinYMin meet" x="998" y="-1039"/>
-</g>
-<!-- NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCC(c1ccc(c(c1)O)O)O -->
-<g id="edge13" class="edge">
-<title>NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCC(c1ccc(c(c1)O)O)O</title>
-<path fill="none" stroke="#000000" d="M1330.1416,-1112.3196C1315.8122,-1098.2828 1299.8639,-1085.0394 1283,-1075 1229.2737,-1043.0155 1198.2225,-1074.8579 1147,-1039 1145.3805,-1037.8663 1143.7834,-1036.688 1142.209,-1035.4693"/>
-<polygon fill="#000000" stroke="#000000" points="1138.0946,-1032.1517 1143.3993,-1033.5387 1140.0408,-1033.721 1141.9869,-1035.2903 1141.9869,-1035.2903 1141.9869,-1035.2903 1140.0408,-1033.721 1140.5745,-1037.0418 1138.0946,-1032.1517 1138.0946,-1032.1517"/>
+<path fill="none" stroke="#000000" d="M249.7246,-819.347C279.9744,-738.5129 321.3809,-627.8655 351.3596,-547.7556"/>
+<polygon fill="#000000" stroke="#000000" points="353.1374,-543.005 353.4922,-548.4765 352.2612,-545.3465 351.3849,-547.6879 351.3849,-547.6879 351.3849,-547.6879 352.2612,-545.3465 349.2776,-546.8993 353.1374,-543.005 353.1374,-543.005"/>
 </g>
 <!-- NCCc1cccc(c1)OC -->
-<g id="node20" class="node">
+<g id="node2" class="node">
 <title>NCCc1cccc(c1)OC</title>
-<image xlink:href="molecules/NCCc1cccc⚪c1⚫OC.svg" width="166px" height="197px" preserveAspectRatio="xMinYMin meet" x="814" y="-1024"/>
-</g>
-<!-- NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCCc1cccc(c1)OC -->
-<g id="edge14" class="edge">
-<title>NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCCc1cccc(c1)OC</title>
-<path fill="none" stroke="#000000" d="M1333.0875,-1112.2562C1318.1945,-1097.6811 1301.2837,-1084.2532 1283,-1075 1165.5429,-1015.5559 1104.163,-1102.7752 989,-1039 982.9879,-1035.6706 977.2179,-1031.7747 971.7061,-1027.4693"/>
-<polygon fill="#000000" stroke="#000000" points="967.5418,-1024.0998 972.8441,-1025.4958 969.4853,-1025.6724 971.4288,-1027.2449 971.4288,-1027.2449 971.4288,-1027.2449 969.4853,-1025.6724 970.0135,-1028.9941 967.5418,-1024.0998 967.5418,-1024.0998"/>
-</g>
-<!-- NCCC=CC=C(CO)O -->
-<g id="node13" class="node">
-<title>NCCC=CC=C(CO)O</title>
-<image xlink:href="molecules/NCCC=CC=C⚪CO⚫O.svg" width="218px" height="197px" preserveAspectRatio="xMinYMin meet" x="537" y="-543"/>
-</g>
-<!-- CNCCC=CC=C(CO)O&#45;&gt;NCCC=CC=C(CO)O -->
-<g id="edge24" class="edge">
-<title>CNCCC=CC=C(CO)O&#45;&gt;NCCC=CC=C(CO)O</title>
-<path fill="none" stroke="#000000" d="M598.3019,-623.7525C604.2945,-601.2318 611.4738,-574.2517 618.421,-548.1435"/>
-<polygon fill="#000000" stroke="#000000" points="619.7152,-543.28 620.6037,-548.6905 619.0723,-545.6959 618.4294,-548.1119 618.4294,-548.1119 618.4294,-548.1119 619.0723,-545.6959 616.2551,-547.5332 619.7152,-543.28 619.7152,-543.28"/>
-</g>
-<!-- OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O -->
-<g id="node7" class="node">
-<title>OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O</title>
-<polygon fill="none" stroke="#000000" points="462,-1298.5 262,-1298.5 262,-1093.5 462,-1093.5 462,-1298.5"/>
-<image xlink:href="molecules/OC1C=CC2C34C1Oc1c4c⚪CC2N⚪CC3⚫C⚫ccc1O.svg" width="200px" height="205px" preserveAspectRatio="xMinYMin meet" x="262" y="-1298.5"/>
-</g>
-<!-- OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;CN(C(CC=CC)CC=CC=C(CO)O)CC -->
-<g id="edge9" class="edge">
-<title>OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;CN(C(CC=CC)CC=CC=C(CO)O)CC</title>
-<path fill="none" stroke="#000000" d="M360.1026,-1093.3498C359.572,-1064.6469 359.003,-1033.8611 358.4989,-1006.5931"/>
-<polygon fill="#000000" stroke="#000000" points="358.4056,-1001.5438 360.7477,-1006.5014 358.4519,-1004.0434 358.4981,-1006.543 358.4981,-1006.543 358.4981,-1006.543 358.4519,-1004.0434 356.2485,-1006.5846 358.4056,-1001.5438 358.4056,-1001.5438"/>
-</g>
-<!-- CNCCc1ccc(c(c1)O)O -->
-<g id="node9" class="node">
-<title>CNCCc1ccc(c(c1)O)O</title>
-<image xlink:href="molecules/CNCCc1ccc⚪c⚪c1⚫O⚫O.svg" width="218px" height="167px" preserveAspectRatio="xMinYMin meet" x="510" y="-1009"/>
-</g>
-<!-- OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;CNCCc1ccc(c(c1)O)O -->
-<g id="edge11" class="edge">
-<title>OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;CNCCc1ccc(c(c1)O)O</title>
-<path fill="none" stroke="#000000" d="M454.7427,-1093.4179C460.5572,-1087.1622 466.3436,-1080.9824 472,-1075 491.1872,-1054.7068 512.0774,-1033.1489 531.9264,-1012.9073"/>
-<polygon fill="#000000" stroke="#000000" points="535.6199,-1009.1437 533.7236,-1014.2883 533.8688,-1010.928 532.1177,-1012.7123 532.1177,-1012.7123 532.1177,-1012.7123 533.8688,-1010.928 530.5118,-1011.1364 535.6199,-1009.1437 535.6199,-1009.1437"/>
-</g>
-<!-- OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;NCCc1cccc(c1)OC -->
-<g id="edge10" class="edge">
-<title>OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;NCCc1cccc(c1)OC</title>
-<path fill="none" stroke="#000000" d="M444.3339,-1093.4009C453.0726,-1086.3791 462.3253,-1080.0861 472,-1075 577.2074,-1019.6916 626.4441,-1082.6463 737,-1039 762.1993,-1029.0516 787.1872,-1014.3265 809.6618,-998.754"/>
-<polygon fill="#000000" stroke="#000000" points="813.8285,-995.8374 811.0226,-1000.548 811.7804,-997.271 809.7323,-998.7047 809.7323,-998.7047 809.7323,-998.7047 811.7804,-997.271 808.442,-996.8614 813.8285,-995.8374 813.8285,-995.8374"/>
-</g>
-<!-- CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O -->
-<g id="node8" class="node">
-<title>CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O</title>
-<polygon fill="none" stroke="#000000" points="244,-1294 0,-1294 0,-1098 244,-1098 244,-1294"/>
-<image xlink:href="molecules/CN1CCc2c3C1Cc1ccc⚪c⚪c1c3ccc2⚫O⚫O.svg" width="244px" height="196px" preserveAspectRatio="xMinYMin meet" x="0" y="-1294"/>
-</g>
-<!-- CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O&#45;&gt;CN(C(CC=CC)CC=CC=C(CO)O)CC -->
-<g id="edge1" class="edge">
-<title>CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O&#45;&gt;CN(C(CC=CC)CC=CC=C(CO)O)CC</title>
-<path fill="none" stroke="#000000" d="M207.1727,-1097.9608C233.5716,-1067.5739 262.3313,-1034.4697 287.5309,-1005.4634"/>
-<polygon fill="#000000" stroke="#000000" points="290.903,-1001.5819 289.3224,-1006.832 289.2634,-1003.4691 287.6238,-1005.3564 287.6238,-1005.3564 287.6238,-1005.3564 289.2634,-1003.4691 285.9253,-1003.8808 290.903,-1001.5819 290.903,-1001.5819"/>
-</g>
-<!-- CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O&#45;&gt;CNCCc1ccc(c(c1)O)O -->
-<g id="edge2" class="edge">
-<title>CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O&#45;&gt;CNCCc1ccc(c(c1)O)O</title>
-<path fill="none" stroke="#000000" d="M215.4955,-1097.9757C227.409,-1089.1339 240.0052,-1081.1964 253,-1075 353.5331,-1027.0622 400.9568,-1087.952 501,-1039 515.2301,-1032.0371 528.8572,-1022.7262 541.4692,-1012.4198"/>
-<polygon fill="#000000" stroke="#000000" points="545.3502,-1009.1908 542.9456,-1014.1184 543.4284,-1010.7898 541.5066,-1012.3887 541.5066,-1012.3887 541.5066,-1012.3887 543.4284,-1010.7898 540.0675,-1010.6591 545.3502,-1009.1908 545.3502,-1009.1908"/>
-</g>
-<!-- CNCCc1ccc(c(c1)O)O&#45;&gt;CNCCC=CC=C(CO)O -->
-<g id="edge15" class="edge">
-<title>CNCCc1ccc(c(c1)O)O&#45;&gt;CNCCC=CC=C(CO)O</title>
-<path fill="none" stroke="#000000" d="M607.1994,-841.8843C602.3016,-807.1799 596.7352,-767.7379 592.2827,-736.189"/>
-<polygon fill="#000000" stroke="#000000" points="591.578,-731.1954 594.5047,-735.8318 591.9274,-733.6708 592.2768,-736.1463 592.2768,-736.1463 592.2768,-736.1463 591.9274,-733.6708 590.0489,-736.4608 591.578,-731.1954 591.578,-731.1954"/>
-</g>
-<!-- NCCc1ccc(c(c1)O)O -->
-<g id="node10" class="node">
-<title>NCCc1ccc(c(c1)O)O</title>
-<image xlink:href="molecules/NCCc1ccc⚪c⚪c1⚫O⚫O.svg" width="166px" height="197px" preserveAspectRatio="xMinYMin meet" x="737" y="-776"/>
-</g>
-<!-- CNCCc1ccc(c(c1)O)O&#45;&gt;NCCc1ccc(c(c1)O)O -->
-<g id="edge16" class="edge">
-<title>CNCCc1ccc(c(c1)O)O&#45;&gt;NCCc1ccc(c(c1)O)O</title>
-<path fill="none" stroke="#000000" d="M686.7692,-841.8843C702.7962,-822.1097 720.0698,-800.7969 736.6963,-780.2827"/>
-<polygon fill="#000000" stroke="#000000" points="740.0124,-776.1912 738.6121,-781.4923 738.4383,-778.1334 736.8641,-780.0756 736.8641,-780.0756 736.8641,-780.0756 738.4383,-778.1334 735.1161,-778.6589 740.0124,-776.1912 740.0124,-776.1912"/>
-</g>
-<!-- NCCc1ccc(c(c1)O)O&#45;&gt;NCCC=CC=C(CO)O -->
-<g id="edge19" class="edge">
-<title>NCCc1ccc(c(c1)O)O&#45;&gt;NCCC=CC=C(CO)O</title>
-<path fill="none" stroke="#000000" d="M746.2083,-578.687C738.4402,-568.2848 730.5282,-557.6901 722.7279,-547.2449"/>
-<polygon fill="#000000" stroke="#000000" points="719.6281,-543.094 724.4227,-545.7539 721.124,-545.0971 722.6199,-547.1002 722.6199,-547.1002 722.6199,-547.1002 721.124,-545.0971 720.8171,-548.4465 719.6281,-543.094 719.6281,-543.094"/>
+<image xlink:href="molecules/NCCc1cccc⚪c1⚫OC.svg" width="166px" height="197px" preserveAspectRatio="xMinYMin meet" x="456" y="-1024"/>
 </g>
 <!-- NCCc1cccc(c1)O -->
-<g id="node14" class="node">
-<title>NCCc1cccc(c1)O</title>
-<image xlink:href="molecules/NCCc1cccc⚪c1⚫O.svg" width="191px" height="122px" preserveAspectRatio="xMinYMin meet" x="779.5" y="-505.5"/>
-</g>
-<!-- NCCc1ccc(c(c1)O)O&#45;&gt;NCCc1cccc(c1)O -->
-<g id="edge20" class="edge">
-<title>NCCc1ccc(c(c1)O)O&#45;&gt;NCCc1cccc(c1)O</title>
-<path fill="none" stroke="#000000" d="M843.325,-578.687C848.7459,-555.7218 854.3885,-531.8178 859.3835,-510.6573"/>
-<polygon fill="#000000" stroke="#000000" points="860.5719,-505.6229 861.6129,-511.0061 859.9975,-508.056 859.4231,-510.4891 859.4231,-510.4891 859.4231,-510.4891 859.9975,-508.056 857.2333,-509.9722 860.5719,-505.6229 860.5719,-505.6229"/>
-</g>
-<!-- NCCc1ccc(c(c1)O)O&#45;&gt;NCCc1ccc(cc1)O -->
-<g id="edge21" class="edge">
-<title>NCCc1ccc(c(c1)O)O&#45;&gt;NCCc1ccc(cc1)O</title>
-<path fill="none" stroke="#000000" d="M903.1121,-611.7622C928.5099,-590.5931 956.0434,-566.5121 980,-543 984.1138,-538.9625 988.2575,-534.757 992.3848,-530.4565"/>
-<polygon fill="#000000" stroke="#000000" points="995.8468,-526.8233 994.0265,-531.9953 994.1222,-528.6332 992.3976,-530.4431 992.3976,-530.4431 992.3976,-530.4431 994.1222,-528.6332 990.7686,-528.8909 995.8468,-526.8233 995.8468,-526.8233"/>
-</g>
-<!-- NCCC=CC=C(O)C -->
 <g id="node11" class="node">
-<title>NCCC=CC=C(O)C</title>
-<image xlink:href="molecules/NCCC=CC=C⚪O⚫C.svg" width="218px" height="137px" preserveAspectRatio="xMinYMin meet" x="767" y="-295"/>
-</g>
-<!-- NCCC=CC=C(O)C&#45;&gt;NCCC=CC=CC -->
-<g id="edge29" class="edge">
-<title>NCCC=CC=C(O)C&#45;&gt;NCCC=CC=CC</title>
-<path fill="none" stroke="#000000" d="M876,-157.6287C876,-142.6908 876,-127.0204 876,-112.5033"/>
-<polygon fill="#000000" stroke="#000000" points="876,-107.2105 878.2501,-112.2105 876,-109.7105 876.0001,-112.2105 876.0001,-112.2105 876.0001,-112.2105 876,-109.7105 873.7501,-112.2105 876,-107.2105 876,-107.2105"/>
-</g>
-<!-- NCCc1ccccc1 -->
-<g id="node12" class="node">
-<title>NCCc1ccccc1</title>
-<image xlink:href="molecules/NCCc1ccccc1.svg" width="140px" height="167px" preserveAspectRatio="xMinYMin meet" x="1003" y="-310"/>
-</g>
-<!-- NCCc1ccccc1&#45;&gt;NCCC=CC=CC -->
-<g id="edge33" class="edge">
-<title>NCCc1ccccc1&#45;&gt;NCCC=CC=CC</title>
-<path fill="none" stroke="#000000" d="M1002.9474,-151.2429C999.961,-148.4225 996.9716,-145.6646 994,-143 981.6827,-131.955 968.1026,-120.8081 954.6728,-110.3083"/>
-<polygon fill="#000000" stroke="#000000" points="950.5113,-107.0714 955.8394,-108.3653 952.4846,-108.6063 954.458,-110.1413 954.458,-110.1413 954.458,-110.1413 952.4846,-108.6063 953.0765,-111.9173 950.5113,-107.0714 950.5113,-107.0714"/>
-</g>
-<!-- NCCC=CC=C(CO)O&#45;&gt;NCCC=CC=CCO -->
-<g id="edge26" class="edge">
-<title>NCCC=CC=C(CO)O&#45;&gt;NCCC=CC=CCO</title>
-<path fill="none" stroke="#000000" d="M637.3895,-345.7054C635.5945,-325.1105 633.7568,-304.0252 632.1357,-285.4255"/>
-<polygon fill="#000000" stroke="#000000" points="631.6844,-280.2478 634.3602,-285.0335 631.9016,-282.7383 632.1187,-285.2289 632.1187,-285.2289 632.1187,-285.2289 631.9016,-282.7383 629.8772,-285.4243 631.6844,-280.2478 631.6844,-280.2478"/>
-</g>
-<!-- NCCC=CC=C(CO)O&#45;&gt;NCCC=CC=C(O)C -->
-<g id="edge25" class="edge">
-<title>NCCC=CC=C(CO)O&#45;&gt;NCCC=CC=C(O)C</title>
-<path fill="none" stroke="#000000" d="M750.2328,-345.7054C766.8877,-329.9195 783.8465,-313.8455 799.6954,-298.8235"/>
-<polygon fill="#000000" stroke="#000000" points="803.7,-295.0278 801.6188,-300.1005 801.8855,-296.7477 800.071,-298.4675 800.071,-298.4675 800.071,-298.4675 801.8855,-296.7477 798.5232,-296.8344 803.7,-295.0278 803.7,-295.0278"/>
-</g>
-<!-- NCCc1cccc(c1)O&#45;&gt;NCCC=CC=CCO -->
-<g id="edge30" class="edge">
-<title>NCCc1cccc(c1)O&#45;&gt;NCCC=CC=CCO</title>
-<path fill="none" stroke="#000000" d="M806.3951,-383.4576C792.3879,-371.0404 777.7339,-358.0831 764,-346 740.8158,-325.6026 715.3418,-303.3415 692.7148,-283.6206"/>
-<polygon fill="#000000" stroke="#000000" points="688.8174,-280.2243 694.0652,-281.8129 690.7022,-281.8667 692.587,-283.5092 692.587,-283.5092 692.587,-283.5092 690.7022,-281.8667 691.1088,-285.2055 688.8174,-280.2243 688.8174,-280.2243"/>
-</g>
-<!-- NCCc1cccc(c1)O&#45;&gt;NCCc1ccccc1 -->
-<g id="edge31" class="edge">
-<title>NCCc1cccc(c1)O&#45;&gt;NCCc1ccccc1</title>
-<path fill="none" stroke="#000000" d="M930.4173,-383.485C951.702,-360.0503 976.3448,-332.9184 999.0946,-307.8705"/>
-<polygon fill="#000000" stroke="#000000" points="1002.7288,-303.8693 1001.0327,-309.0833 1001.048,-305.7199 999.3671,-307.5706 999.3671,-307.5706 999.3671,-307.5706 1001.048,-305.7199 997.7015,-306.0578 1002.7288,-303.8693 1002.7288,-303.8693"/>
-</g>
-<!-- CNCC(c1ccc(c(c1)O)O)O -->
-<g id="node15" class="node">
-<title>CNCC(c1ccc(c(c1)O)O)O</title>
-<polygon fill="none" stroke="#000000" points="908,-1317 768,-1317 768,-1075 908,-1075 908,-1317"/>
-<image xlink:href="molecules/CNCC⚪c1ccc⚪c⚪c1⚫O⚫O⚫O.svg" width="140px" height="242px" preserveAspectRatio="xMinYMin meet" x="768" y="-1317"/>
-</g>
-<!-- CNCC(c1ccc(c(c1)O)O)O&#45;&gt;CNCCc1ccc(c(c1)O)O -->
-<g id="edge4" class="edge">
-<title>CNCC(c1ccc(c(c1)O)O)O&#45;&gt;CNCCc1ccc(c(c1)O)O</title>
-<path fill="none" stroke="#000000" d="M767.8085,-1086.5414C764.8847,-1082.609 761.9432,-1078.7495 759,-1075 742.739,-1054.2842 724.1691,-1033.042 705.9872,-1013.3117"/>
-<polygon fill="#000000" stroke="#000000" points="702.3568,-1009.3864 707.4036,-1011.5294 704.0543,-1011.2218 705.7518,-1013.0572 705.7518,-1013.0572 705.7518,-1013.0572 704.0543,-1011.2218 704.1,-1014.5849 702.3568,-1009.3864 702.3568,-1009.3864"/>
-</g>
-<!-- CNCC(c1ccc(c(c1)O)O)O&#45;&gt;NCC(c1ccc(c(c1)O)O)O -->
-<g id="edge3" class="edge">
-<title>CNCC(c1ccc(c(c1)O)O)O&#45;&gt;NCC(c1ccc(c(c1)O)O)O</title>
-<path fill="none" stroke="#000000" d="M908.0943,-1084.5307C911.3122,-1081.206 914.6159,-1078.0159 918,-1075 944.4129,-1051.4604 962.3079,-1062.2226 989,-1039 990.6811,-1037.5374 992.3441,-1036.0317 993.9882,-1034.4879"/>
-<polygon fill="#000000" stroke="#000000" points="997.7895,-1030.819 995.7544,-1035.9103 995.9907,-1032.5552 994.1918,-1034.2914 994.1918,-1034.2914 994.1918,-1034.2914 995.9907,-1032.5552 992.6293,-1032.6724 997.7895,-1030.819 997.7895,-1030.819"/>
-</g>
-<!-- COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC -->
-<g id="node16" class="node">
-<title>COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC</title>
-<polygon fill="none" stroke="#000000" points="1273.5,-1317 926.5,-1317 926.5,-1075 1273.5,-1075 1273.5,-1317"/>
-<image xlink:href="molecules/COc1cc⚪CCN2CCN⚪CC2⚫c2ccccc2Cl⚫ccc1OC.svg" width="347px" height="242px" preserveAspectRatio="xMinYMin meet" x="926.5" y="-1317"/>
-</g>
-<!-- COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;NCCc1ccc(cc1)OC -->
-<g id="edge6" class="edge">
-<title>COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;NCCc1ccc(cc1)OC</title>
-<path fill="none" stroke="#000000" d="M1156.3664,-1074.9911C1162.3772,-1062.087 1168.4694,-1049.0081 1174.421,-1036.2312"/>
-<polygon fill="#000000" stroke="#000000" points="1176.6069,-1031.5384 1176.5352,-1037.0209 1175.5512,-1033.8047 1174.4956,-1036.0709 1174.4956,-1036.0709 1174.4956,-1036.0709 1175.5512,-1033.8047 1172.456,-1035.1208 1176.6069,-1031.5384 1176.6069,-1031.5384"/>
-</g>
-<!-- COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;CNCCc1ccc(c(c1)O)O -->
-<g id="edge8" class="edge">
-<title>COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;CNCCc1ccc(c(c1)O)O</title>
-<path fill="none" stroke="#000000" d="M926.2929,-1079.5815C923.1893,-1078.0125 920.0902,-1076.4836 917,-1075 869.8649,-1052.3703 852.5382,-1060.7703 805,-1039 780.8779,-1027.9532 756.0125,-1014.4404 732.6216,-1000.6419"/>
-<polygon fill="#000000" stroke="#000000" points="728.2716,-998.0626 733.72,-998.6774 730.422,-999.3377 732.5724,-1000.6128 732.5724,-1000.6128 732.5724,-1000.6128 730.422,-999.3377 731.4249,-1002.5481 728.2716,-998.0626 728.2716,-998.0626"/>
-</g>
-<!-- COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;NCCc1cccc(c1)OC -->
-<g id="edge7" class="edge">
-<title>COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;NCCc1cccc(c1)OC</title>
-<path fill="none" stroke="#000000" d="M1009.1874,-1074.9911C997.5117,-1059.433 985.6451,-1043.6207 974.2151,-1028.3901"/>
-<polygon fill="#000000" stroke="#000000" points="971.0034,-1024.1104 975.8042,-1026.759 972.504,-1026.11 974.0046,-1028.1095 974.0046,-1028.1095 974.0046,-1028.1095 972.504,-1026.11 972.205,-1029.4601 971.0034,-1024.1104 971.0034,-1024.1104"/>
-</g>
-<!-- Oc1ccc(cc1)C1CNCCc2c1cc(O)c(c2Cl)O -->
-<g id="node17" class="node">
-<title>Oc1ccc(cc1)C1CNCCc2c1cc(O)c(c2Cl)O</title>
-<polygon fill="none" stroke="#000000" points="749.5,-1300 480.5,-1300 480.5,-1092 749.5,-1092 749.5,-1300"/>
-<image xlink:href="molecules/Oc1ccc⚪cc1⚫C1CNCCc2c1cc⚪O⚫c⚪c2Cl⚫O.svg" width="269px" height="208px" preserveAspectRatio="xMinYMin meet" x="480.5" y="-1300"/>
-</g>
-<!-- Oc1ccc(cc1)C1CNCCc2c1cc(O)c(c2Cl)O&#45;&gt;CNCCc1ccc(c(c1)O)O -->
-<g id="edge5" class="edge">
-<title>Oc1ccc(cc1)C1CNCCc2c1cc(O)c(c2Cl)O&#45;&gt;CNCCc1ccc(c(c1)O)O</title>
-<path fill="none" stroke="#000000" d="M616.5408,-1091.8046C616.9188,-1066.2384 617.32,-1039.1072 617.6863,-1014.3391"/>
-<polygon fill="#000000" stroke="#000000" points="617.7639,-1009.0911 619.9396,-1014.1239 617.7269,-1011.5908 617.6899,-1014.0906 617.6899,-1014.0906 617.6899,-1014.0906 617.7269,-1011.5908 615.4401,-1014.0573 617.7639,-1009.0911 617.7639,-1009.0911"/>
-</g>
-<!-- NCC(c1ccc(c(c1)O)O)O&#45;&gt;NCCc1ccc(c(c1)O)O -->
-<g id="edge18" class="edge">
-<title>NCC(c1ccc(c(c1)O)O)O&#45;&gt;NCCc1ccc(c(c1)O)O</title>
-<path fill="none" stroke="#000000" d="M997.782,-821.7779C994.8872,-818.4222 991.9562,-815.1522 989,-812 964.5512,-785.9303 934.8812,-760.6287 907.267,-739.137"/>
-<polygon fill="#000000" stroke="#000000" points="903.2085,-735.9941 908.5394,-737.2766 905.1852,-737.5248 907.1618,-739.0555 907.1618,-739.0555 907.1618,-739.0555 905.1852,-737.5248 905.7841,-740.8345 903.2085,-735.9941 903.2085,-735.9941"/>
-</g>
-<!-- NCCc1ccc(cc1)O&#45;&gt;NCCC=CC=C(O)C -->
-<g id="edge27" class="edge">
-<title>NCCc1ccc(cc1)O&#45;&gt;NCCC=CC=C(O)C</title>
-<path fill="none" stroke="#000000" d="M995.7908,-363.9442C977.2807,-342.7063 957.4205,-319.9193 939.2986,-299.1269"/>
-<polygon fill="#000000" stroke="#000000" points="935.9358,-295.2685 940.9172,-297.5595 937.5784,-297.1531 939.221,-299.0378 939.221,-299.0378 939.221,-299.0378 937.5784,-297.1531 937.5248,-300.5161 935.9358,-295.2685 935.9358,-295.2685"/>
-</g>
-<!-- NCCc1ccc(cc1)O&#45;&gt;NCCc1ccccc1 -->
-<g id="edge28" class="edge">
-<title>NCCc1ccc(cc1)O&#45;&gt;NCCc1ccccc1</title>
-<path fill="none" stroke="#000000" d="M1069.1723,-345.7054C1069.4957,-335.6324 1069.823,-325.442 1070.1428,-315.4826"/>
-<polygon fill="#000000" stroke="#000000" points="1070.3093,-310.2973 1072.3975,-315.367 1070.229,-312.7961 1070.1487,-315.2948 1070.1487,-315.2948 1070.1487,-315.2948 1070.229,-312.7961 1067.8999,-315.2225 1070.3093,-310.2973 1070.3093,-310.2973"/>
+<title>NCCc1cccc(c1)O</title>
+<image xlink:href="molecules/NCCc1cccc⚪c1⚫O.svg" width="191px" height="122px" preserveAspectRatio="xMinYMin meet" x="484.5" y="-505.5"/>
 </g>
 <!-- NCCc1cccc(c1)OC&#45;&gt;NCCc1cccc(c1)O -->
 <g id="edge23" class="edge">
 <title>NCCc1cccc(c1)OC&#45;&gt;NCCc1cccc(c1)O</title>
-<path fill="none" stroke="#000000" d="M910.5149,-826.8776C917.7962,-757.3101 923.2206,-662.0919 912,-579 908.9417,-556.3525 903.1108,-532.1265 896.9669,-510.5627"/>
-<polygon fill="#000000" stroke="#000000" points="895.5685,-505.7176 899.1168,-509.8976 896.2618,-508.1195 896.9551,-510.5215 896.9551,-510.5215 896.9551,-510.5215 896.2618,-508.1195 894.7933,-511.1454 895.5685,-505.7176 895.5685,-505.7176"/>
+<path fill="none" stroke="#000000" d="M504.9748,-826.7515C485.8601,-756.5001 470.1676,-660.5135 494,-579 501.0798,-554.7852 513.9977,-530.7857 527.707,-509.9099"/>
+<polygon fill="#000000" stroke="#000000" points="530.6426,-505.5037 529.7428,-510.9124 529.2565,-507.5843 527.8703,-509.6648 527.8703,-509.6648 527.8703,-509.6648 529.2565,-507.5843 525.9978,-508.4173 530.6426,-505.5037 530.6426,-505.5037"/>
+</g>
+<!-- CNCCC=CC=C(CO)O -->
+<g id="node3" class="node">
+<title>CNCCC=CC=C(CO)O</title>
+<image xlink:href="molecules/CNCCC=CC=C⚪CO⚫O.svg" width="269px" height="107px" preserveAspectRatio="xMinYMin meet" x="687.5" y="-731"/>
+</g>
+<!-- NCCC=CC=C(CO)O -->
+<g id="node4" class="node">
+<title>NCCC=CC=C(CO)O</title>
+<image xlink:href="molecules/NCCC=CC=C⚪CO⚫O.svg" width="218px" height="197px" preserveAspectRatio="xMinYMin meet" x="707" y="-543"/>
+</g>
+<!-- CNCCC=CC=C(CO)O&#45;&gt;NCCC=CC=C(CO)O -->
+<g id="edge24" class="edge">
+<title>CNCCC=CC=C(CO)O&#45;&gt;NCCC=CC=C(CO)O</title>
+<path fill="none" stroke="#000000" d="M820.6159,-623.7525C820.0384,-601.3253 819.347,-574.4755 818.6773,-548.4686"/>
+<polygon fill="#000000" stroke="#000000" points="818.5437,-543.28 820.9218,-548.2204 818.6081,-545.7792 818.6725,-548.2783 818.6725,-548.2783 818.6725,-548.2783 818.6081,-545.7792 816.4232,-548.3363 818.5437,-543.28 818.5437,-543.28"/>
+</g>
+<!-- NCCC=CC=CCO -->
+<g id="node17" class="node">
+<title>NCCC=CC=CCO</title>
+<image xlink:href="molecules/NCCC=CC=CCO.svg" width="243px" height="107px" preserveAspectRatio="xMinYMin meet" x="701.5" y="-280"/>
+</g>
+<!-- NCCC=CC=C(CO)O&#45;&gt;NCCC=CC=CCO -->
+<g id="edge26" class="edge">
+<title>NCCC=CC=C(CO)O&#45;&gt;NCCC=CC=CCO</title>
+<path fill="none" stroke="#000000" d="M819.1723,-345.7054C819.8336,-325.1105 820.5107,-304.0252 821.1079,-285.4255"/>
+<polygon fill="#000000" stroke="#000000" points="821.2742,-280.2478 823.3624,-285.3175 821.1939,-282.7465 821.1136,-285.2452 821.1136,-285.2452 821.1136,-285.2452 821.1939,-282.7465 818.8648,-285.1729 821.2742,-280.2478 821.2742,-280.2478"/>
+</g>
+<!-- NCCC=CC=C(O)C -->
+<g id="node19" class="node">
+<title>NCCC=CC=C(O)C</title>
+<image xlink:href="molecules/NCCC=CC=C⚪O⚫C.svg" width="218px" height="137px" preserveAspectRatio="xMinYMin meet" x="465" y="-295"/>
+</g>
+<!-- NCCC=CC=C(CO)O&#45;&gt;NCCC=CC=C(O)C -->
+<g id="edge25" class="edge">
+<title>NCCC=CC=C(CO)O&#45;&gt;NCCC=CC=C(O)C</title>
+<path fill="none" stroke="#000000" d="M706.682,-346.0235C688.9816,-330.0784 670.9445,-313.8302 654.1051,-298.6608"/>
+<polygon fill="#000000" stroke="#000000" points="650.3056,-295.2381 655.5265,-296.9129 652.1631,-296.9114 654.0206,-298.5846 654.0206,-298.5846 654.0206,-298.5846 652.1631,-296.9114 652.5146,-300.2564 650.3056,-295.2381 650.3056,-295.2381"/>
+</g>
+<!-- COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC -->
+<g id="node5" class="node">
+<title>COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC</title>
+<polygon fill="none" stroke="#000000" points="576.5,-1317 229.5,-1317 229.5,-1075 576.5,-1075 576.5,-1317"/>
+<image xlink:href="molecules/COc1cc⚪CCN2CCN⚪CC2⚫c2ccccc2Cl⚫ccc1OC.svg" width="347px" height="242px" preserveAspectRatio="xMinYMin meet" x="229.5" y="-1317"/>
+</g>
+<!-- COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;NCCc1ccc(cc1)OC -->
+<g id="edge6" class="edge">
+<title>COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;NCCc1ccc(cc1)OC</title>
+<path fill="none" stroke="#000000" d="M314.6916,-1074.8902C305.9783,-1062.7884 297.2953,-1050.6676 289,-1039 287.0828,-1036.3034 285.1431,-1033.5683 283.1889,-1030.8065"/>
+<polygon fill="#000000" stroke="#000000" points="280.1071,-1026.4464 284.8305,-1029.2308 281.5501,-1028.4879 282.9931,-1030.5294 282.9931,-1030.5294 282.9931,-1030.5294 281.5501,-1028.4879 281.1557,-1031.8281 280.1071,-1026.4464 280.1071,-1026.4464"/>
+</g>
+<!-- COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;NCCc1cccc(c1)OC -->
+<g id="edge7" class="edge">
+<title>COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;NCCc1cccc(c1)OC</title>
+<path fill="none" stroke="#000000" d="M463.8399,-1074.9911C471.5953,-1059.566 479.4762,-1043.891 487.0733,-1028.7808"/>
+<polygon fill="#000000" stroke="#000000" points="489.4214,-1024.1104 489.1856,-1029.5883 488.2984,-1026.344 487.1754,-1028.5776 487.1754,-1028.5776 487.1754,-1028.5776 488.2984,-1026.344 485.1651,-1027.5669 489.4214,-1024.1104 489.4214,-1024.1104"/>
+</g>
+<!-- CNCCc1ccc(c(c1)O)O -->
+<g id="node18" class="node">
+<title>CNCCc1ccc(c(c1)O)O</title>
+<image xlink:href="molecules/CNCCc1ccc⚪c⚪c1⚫O⚫O.svg" width="218px" height="167px" preserveAspectRatio="xMinYMin meet" x="650" y="-1009"/>
+</g>
+<!-- COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;CNCCc1ccc(c(c1)O)O -->
+<g id="edge8" class="edge">
+<title>COc1cc(CCN2CCN(CC2)c2ccccc2Cl)ccc1OC&#45;&gt;CNCCc1ccc(c(c1)O)O</title>
+<path fill="none" stroke="#000000" d="M576.7241,-1079.6782C595.2806,-1066.2782 613.6872,-1052.5543 631,-1039 641.7264,-1030.6022 652.7181,-1021.5702 663.5357,-1012.4008"/>
+<polygon fill="#000000" stroke="#000000" points="667.5125,-1009.0172 665.1624,-1013.971 665.6084,-1010.6373 663.7043,-1012.2573 663.7043,-1012.2573 663.7043,-1012.2573 665.6084,-1010.6373 662.2463,-1010.5437 667.5125,-1009.0172 667.5125,-1009.0172"/>
+</g>
+<!-- CN(C(CC=CC)CC=CC=C(CO)O)CC -->
+<g id="node6" class="node">
+<title>CN(C(CC=CC)CC=CC=C(CO)O)CC</title>
+<image xlink:href="molecules/CN⚪C⚪CC=CC⚫CC=CC=C⚪CO⚫O⚫CC.svg" width="269px" height="152px" preserveAspectRatio="xMinYMin meet" x="886.5" y="-1001.5"/>
+</g>
+<!-- CN(C(CC=CC)CC=CC=C(CO)O)CC&#45;&gt;CNCCC=CC=C(CO)O -->
+<g id="edge17" class="edge">
+<title>CN(C(CC=CC)CC=CC=C(CO)O)CC&#45;&gt;CNCCC=CC=C(CO)O</title>
+<path fill="none" stroke="#000000" d="M959.941,-849.4064C930.4078,-812.6012 895.5354,-769.1421 868.2427,-735.129"/>
+<polygon fill="#000000" stroke="#000000" points="864.9527,-731.029 869.8369,-733.5206 866.5174,-732.9789 868.082,-734.9288 868.082,-734.9288 868.082,-734.9288 866.5174,-732.9789 866.3271,-736.337 864.9527,-731.029 864.9527,-731.029"/>
+</g>
+<!-- OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O -->
+<g id="node7" class="node">
+<title>OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O</title>
+<polygon fill="none" stroke="#000000" points="953,-1298.5 753,-1298.5 753,-1093.5 953,-1093.5 953,-1298.5"/>
+<image xlink:href="molecules/OC1C=CC2C34C1Oc1c4c⚪CC2N⚪CC3⚫C⚫ccc1O.svg" width="200px" height="205px" preserveAspectRatio="xMinYMin meet" x="753" y="-1298.5"/>
+</g>
+<!-- OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;NCCc1cccc(c1)OC -->
+<g id="edge9" class="edge">
+<title>OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;NCCc1cccc(c1)OC</title>
+<path fill="none" stroke="#000000" d="M767.9776,-1093.4186C760.2641,-1086.7232 752.2399,-1080.48 744,-1075 703.621,-1048.1459 681.363,-1065.8781 641,-1039 635.6406,-1035.4311 630.3794,-1031.5168 625.2461,-1027.3549"/>
+<polygon fill="#000000" stroke="#000000" points="621.3461,-1024.1256 626.6323,-1025.5815 623.2717,-1025.7201 625.1973,-1027.3145 625.1973,-1027.3145 625.1973,-1027.3145 623.2717,-1025.7201 623.7623,-1029.0475 621.3461,-1024.1256 621.3461,-1024.1256"/>
+</g>
+<!-- OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;CN(C(CC=CC)CC=CC=C(CO)O)CC -->
+<g id="edge10" class="edge">
+<title>OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;CN(C(CC=CC)CC=CC=C(CO)O)CC</title>
+<path fill="none" stroke="#000000" d="M916.7531,-1093.3498C934.7277,-1064.4087 954.0174,-1033.3499 971.0565,-1005.915"/>
+<polygon fill="#000000" stroke="#000000" points="973.7713,-1001.5438 973.0446,-1006.9784 972.4523,-1003.6676 971.1333,-1005.7913 971.1333,-1005.7913 971.1333,-1005.7913 972.4523,-1003.6676 969.2219,-1004.6042 973.7713,-1001.5438 973.7713,-1001.5438"/>
+</g>
+<!-- OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;CNCCc1ccc(c(c1)O)O -->
+<g id="edge11" class="edge">
+<title>OC1C=CC2C34C1Oc1c4c(CC2N(CC3)C)ccc1O&#45;&gt;CNCCc1ccc(c(c1)O)O</title>
+<path fill="none" stroke="#000000" d="M817.3286,-1093.3498C808.272,-1067.2881 798.6187,-1039.5092 789.8256,-1014.2056"/>
+<polygon fill="#000000" stroke="#000000" points="788.0789,-1009.1791 791.8455,-1013.1635 788.8995,-1011.5406 789.7202,-1013.9021 789.7202,-1013.9021 789.7202,-1013.9021 788.8995,-1011.5406 787.5949,-1014.6407 788.0789,-1009.1791 788.0789,-1009.1791"/>
+</g>
+<!-- CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O -->
+<g id="node8" class="node">
+<title>CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O</title>
+<polygon fill="none" stroke="#000000" points="1503,-1294 1259,-1294 1259,-1098 1503,-1098 1503,-1294"/>
+<image xlink:href="molecules/CN1CCc2c3C1Cc1ccc⚪c⚪c1c3ccc2⚫O⚫O.svg" width="244px" height="196px" preserveAspectRatio="xMinYMin meet" x="1259" y="-1294"/>
+</g>
+<!-- CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O&#45;&gt;CN(C(CC=CC)CC=CC=C(CO)O)CC -->
+<g id="edge1" class="edge">
+<title>CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O&#45;&gt;CN(C(CC=CC)CC=CC=C(CO)O)CC</title>
+<path fill="none" stroke="#000000" d="M1277.9894,-1097.9405C1268.6903,-1089.9836 1259.2794,-1082.2323 1250,-1075 1218.7303,-1050.6284 1183.496,-1026.2503 1150.2101,-1004.4628"/>
+<polygon fill="#000000" stroke="#000000" points="1145.7391,-1001.544 1151.1559,-1002.3932 1147.8325,-1002.9106 1149.9259,-1004.2773 1149.9259,-1004.2773 1149.9259,-1004.2773 1147.8325,-1002.9106 1148.696,-1006.1614 1145.7391,-1001.544 1145.7391,-1001.544"/>
+</g>
+<!-- CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O&#45;&gt;CNCCc1ccc(c(c1)O)O -->
+<g id="edge2" class="edge">
+<title>CN1CCc2c3C1Cc1ccc(c(c1c3ccc2)O)O&#45;&gt;CNCCc1ccc(c(c1)O)O</title>
+<path fill="none" stroke="#000000" d="M1288.565,-1097.9141C1276.3722,-1088.9578 1263.4214,-1081.0114 1250,-1075 1098.4056,-1007.1011 1029.046,-1108.1103 878,-1039 863.1775,-1032.2181 849.0476,-1022.8158 836.0386,-1012.2993"/>
+<polygon fill="#000000" stroke="#000000" points="832.0378,-1009.0015 837.3272,-1010.4456 833.9669,-1010.5916 835.896,-1012.1818 835.896,-1012.1818 835.896,-1012.1818 833.9669,-1010.5916 834.4649,-1013.918 832.0378,-1009.0015 832.0378,-1009.0015"/>
+</g>
+<!-- NC(=N)C(c1ccc2c(c1)OCO2)O -->
+<g id="node9" class="node">
+<title>NC(=N)C(c1ccc2c(c1)OCO2)O</title>
+<polygon fill="none" stroke="#000000" points="212,-1279.5 0,-1279.5 0,-1112.5 212,-1112.5 212,-1279.5"/>
+<image xlink:href="molecules/NC⚪=N⚫C⚪c1ccc2c⚪c1⚫OCO2⚫O.svg" width="212px" height="167px" preserveAspectRatio="xMinYMin meet" x="0" y="-1279.5"/>
+</g>
+<!-- NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCCc1ccc(cc1)OC -->
+<g id="edge13" class="edge">
+<title>NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCCc1ccc(cc1)OC</title>
+<path fill="none" stroke="#000000" d="M138.194,-1112.2646C147.4043,-1088.309 157.5892,-1061.8184 167.3235,-1036.5"/>
+<polygon fill="#000000" stroke="#000000" points="169.1355,-1031.787 169.4413,-1037.2614 168.2383,-1034.1205 167.3411,-1036.4539 167.3411,-1036.4539 167.3411,-1036.4539 168.2383,-1034.1205 165.241,-1035.6465 169.1355,-1031.787 169.1355,-1031.787"/>
+</g>
+<!-- NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCCc1cccc(c1)OC -->
+<g id="edge12" class="edge">
+<title>NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCCc1cccc(c1)OC</title>
+<path fill="none" stroke="#000000" d="M171.1578,-1112.4625C186.0748,-1097.9651 202.9188,-1084.5144 221,-1075 311.0099,-1027.6364 358.9263,-1089.8734 447,-1039 452.8634,-1035.6131 458.5044,-1031.6984 463.9056,-1027.4028"/>
+<polygon fill="#000000" stroke="#000000" points="467.9889,-1024.0461 465.5553,-1028.9594 466.0577,-1025.6337 464.1264,-1027.2213 464.1264,-1027.2213 464.1264,-1027.2213 466.0577,-1025.6337 462.6976,-1025.4832 467.9889,-1024.0461 467.9889,-1024.0461"/>
+</g>
+<!-- NCC(c1ccc(c(c1)O)O)O -->
+<g id="node20" class="node">
+<title>NCC(c1ccc(c(c1)O)O)O</title>
+<image xlink:href="molecules/NCC⚪c1ccc⚪c⚪c1⚫O⚫O⚫O.svg" width="140px" height="227px" preserveAspectRatio="xMinYMin meet" x="298" y="-1039"/>
+</g>
+<!-- NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCC(c1ccc(c(c1)O)O)O -->
+<g id="edge14" class="edge">
+<title>NC(=N)C(c1ccc2c(c1)OCO2)O&#45;&gt;NCC(c1ccc(c(c1)O)O)O</title>
+<path fill="none" stroke="#000000" d="M178.7285,-1112.1898C192.1003,-1098.9636 206.4524,-1086.0329 221,-1075 248.2467,-1054.336 263.4,-1061.6721 289,-1039 290.8141,-1037.3933 292.6081,-1035.7369 294.3805,-1034.0372"/>
+<polygon fill="#000000" stroke="#000000" points="297.9881,-1030.4894 296.0007,-1035.5996 296.2056,-1032.2424 294.4231,-1033.9953 294.4231,-1033.9953 294.4231,-1033.9953 296.2056,-1032.2424 292.8454,-1032.391 297.9881,-1030.4894 297.9881,-1030.4894"/>
+</g>
+<!-- Oc1ccc(cc1)C1CNCCc2c1cc(O)c(c2Cl)O -->
+<g id="node10" class="node">
+<title>Oc1ccc(cc1)C1CNCCc2c1cc(O)c(c2Cl)O</title>
+<polygon fill="none" stroke="#000000" points="1240.5,-1300 971.5,-1300 971.5,-1092 1240.5,-1092 1240.5,-1300"/>
+<image xlink:href="molecules/Oc1ccc⚪cc1⚫C1CNCCc2c1cc⚪O⚫c⚪c2Cl⚫O.svg" width="269px" height="208px" preserveAspectRatio="xMinYMin meet" x="971.5" y="-1300"/>
+</g>
+<!-- Oc1ccc(cc1)C1CNCCc2c1cc(O)c(c2Cl)O&#45;&gt;CNCCc1ccc(c(c1)O)O -->
+<g id="edge5" class="edge">
+<title>Oc1ccc(cc1)C1CNCCc2c1cc(O)c(c2Cl)O&#45;&gt;CNCCc1ccc(c(c1)O)O</title>
+<path fill="none" stroke="#000000" d="M987.3866,-1091.8976C978.9852,-1085.9163 970.481,-1080.2215 962,-1075 927.4121,-1053.7055 911.9009,-1061.372 878,-1039 866.1181,-1031.1589 854.3502,-1022.0662 843.1026,-1012.5072"/>
+<polygon fill="#000000" stroke="#000000" points="839.3087,-1009.2486 844.5678,-1010.7996 841.2052,-1010.8776 843.1017,-1012.5065 843.1017,-1012.5065 843.1017,-1012.5065 841.2052,-1010.8776 841.6357,-1014.2133 839.3087,-1009.2486 839.3087,-1009.2486"/>
+</g>
+<!-- NCCc1ccccc1 -->
+<g id="node12" class="node">
+<title>NCCc1ccccc1</title>
+<image xlink:href="molecules/NCCc1ccccc1.svg" width="140px" height="167px" preserveAspectRatio="xMinYMin meet" x="307" y="-310"/>
+</g>
+<!-- NCCc1cccc(c1)O&#45;&gt;NCCc1ccccc1 -->
+<g id="edge30" class="edge">
+<title>NCCc1cccc(c1)O&#45;&gt;NCCc1ccccc1</title>
+<path fill="none" stroke="#000000" d="M523.1832,-383.485C500.7123,-359.3536 474.5907,-331.3018 450.6966,-305.6422"/>
+<polygon fill="#000000" stroke="#000000" points="447.1881,-301.8744 452.2422,-304.0003 448.8918,-303.704 450.5955,-305.5336 450.5955,-305.5336 450.5955,-305.5336 448.8918,-303.704 448.9489,-307.067 447.1881,-301.8744 447.1881,-301.8744"/>
+</g>
+<!-- NCCc1cccc(c1)O&#45;&gt;NCCC=CC=CCO -->
+<g id="edge31" class="edge">
+<title>NCCc1cccc(c1)O&#45;&gt;NCCC=CC=CCO</title>
+<path fill="none" stroke="#000000" d="M648.0122,-383.485C682.8219,-352.2564 724.95,-314.4625 759.1471,-283.7837"/>
+<polygon fill="#000000" stroke="#000000" points="763.2771,-280.0785 761.0578,-285.0923 761.4162,-281.748 759.5553,-283.4175 759.5553,-283.4175 759.5553,-283.4175 761.4162,-281.748 758.0528,-281.7426 763.2771,-280.0785 763.2771,-280.0785"/>
+</g>
+<!-- NCCC=CC=CC -->
+<g id="node16" class="node">
+<title>NCCC=CC=CC</title>
+<image xlink:href="molecules/NCCC=CC=CC.svg" width="218px" height="107px" preserveAspectRatio="xMinYMin meet" x="465" y="-107"/>
+</g>
+<!-- NCCc1ccccc1&#45;&gt;NCCC=CC=CC -->
+<g id="edge33" class="edge">
+<title>NCCc1ccccc1&#45;&gt;NCCC=CC=CC</title>
+<path fill="none" stroke="#000000" d="M447.0526,-151.2429C450.039,-148.4225 453.0284,-145.6646 456,-143 468.3173,-131.955 481.8974,-120.8081 495.3272,-110.3083"/>
+<polygon fill="#000000" stroke="#000000" points="499.4887,-107.0714 496.9235,-111.9173 497.5154,-108.6063 495.542,-110.1413 495.542,-110.1413 495.542,-110.1413 497.5154,-108.6063 494.1606,-108.3653 499.4887,-107.0714 499.4887,-107.0714"/>
+</g>
+<!-- NCCc1ccc(c(c1)O)O -->
+<g id="node13" class="node">
+<title>NCCc1ccc(c(c1)O)O</title>
+<image xlink:href="molecules/NCCc1ccc⚪c⚪c1⚫O⚫O.svg" width="166px" height="197px" preserveAspectRatio="xMinYMin meet" x="503" y="-776"/>
+</g>
+<!-- NCCc1ccc(c(c1)O)O&#45;&gt;NCCC=CC=C(CO)O -->
+<g id="edge21" class="edge">
+<title>NCCc1ccc(c(c1)O)O&#45;&gt;NCCC=CC=C(CO)O</title>
+<path fill="none" stroke="#000000" d="M669.2418,-589.011C672.5274,-585.6214 675.7889,-582.2743 679,-579 689.2741,-568.5236 700.066,-557.6728 710.8938,-546.8863"/>
+<polygon fill="#000000" stroke="#000000" points="714.5665,-543.2314 712.6095,-548.3532 712.7945,-544.9948 711.0224,-546.7583 711.0224,-546.7583 711.0224,-546.7583 712.7945,-544.9948 709.4353,-545.1635 714.5665,-543.2314 714.5665,-543.2314"/>
+</g>
+<!-- NCCc1ccc(c(c1)O)O&#45;&gt;NCCc1cccc(c1)O -->
+<g id="edge19" class="edge">
+<title>NCCc1ccc(c(c1)O)O&#45;&gt;NCCc1cccc(c1)O</title>
+<path fill="none" stroke="#000000" d="M583.4555,-578.687C582.8641,-555.7218 582.2485,-531.8178 581.7036,-510.6573"/>
+<polygon fill="#000000" stroke="#000000" points="581.574,-505.6229 583.952,-510.5632 581.6384,-508.122 581.7028,-510.6212 581.7028,-510.6212 581.7028,-510.6212 581.6384,-508.122 579.4535,-510.6792 581.574,-505.6229 581.574,-505.6229"/>
+</g>
+<!-- NCCc1ccc(c(c1)O)O&#45;&gt;NCCc1ccc(cc1)O -->
+<g id="edge20" class="edge">
+<title>NCCc1ccc(c(c1)O)O&#45;&gt;NCCc1ccc(cc1)O</title>
+<path fill="none" stroke="#000000" d="M502.8784,-578.687C489.7973,-563.1366 476.3541,-547.1557 463.5106,-531.8876"/>
+<polygon fill="#000000" stroke="#000000" points="460.2588,-528.0219 465.1993,-530.3998 461.8681,-529.935 463.4774,-531.8482 463.4774,-531.8482 463.4774,-531.8482 461.8681,-529.935 461.7556,-533.2966 460.2588,-528.0219 460.2588,-528.0219"/>
+</g>
+<!-- NCCc1ccc(cc1)O&#45;&gt;NCCc1ccccc1 -->
+<g id="edge27" class="edge">
+<title>NCCc1ccc(cc1)O&#45;&gt;NCCc1ccccc1</title>
+<path fill="none" stroke="#000000" d="M384.1086,-345.7054C383.5079,-335.6324 382.9002,-325.442 382.3063,-315.4826"/>
+<polygon fill="#000000" stroke="#000000" points="381.9971,-310.2973 384.5408,-315.1545 382.146,-312.7929 382.2948,-315.2885 382.2948,-315.2885 382.2948,-315.2885 382.146,-312.7929 380.0488,-315.4225 381.9971,-310.2973 381.9971,-310.2973"/>
+</g>
+<!-- NCCc1ccc(cc1)O&#45;&gt;NCCC=CC=C(O)C -->
+<g id="edge28" class="edge">
+<title>NCCc1ccc(cc1)O&#45;&gt;NCCC=CC=C(O)C</title>
+<path fill="none" stroke="#000000" d="M460.0874,-361.4617C477.4159,-340.9311 495.8457,-319.0958 512.7183,-299.1055"/>
+<polygon fill="#000000" stroke="#000000" points="516.0713,-295.133 514.5657,-300.4052 514.4588,-297.0434 512.8462,-298.9539 512.8462,-298.9539 512.8462,-298.9539 514.4588,-297.0434 511.1268,-297.5026 516.0713,-295.133 516.0713,-295.133"/>
+</g>
+<!-- CNCC(c1ccc(c(c1)O)O)O -->
+<g id="node15" class="node">
+<title>CNCC(c1ccc(c(c1)O)O)O</title>
+<polygon fill="none" stroke="#000000" points="735,-1317 595,-1317 595,-1075 735,-1075 735,-1317"/>
+<image xlink:href="molecules/CNCC⚪c1ccc⚪c⚪c1⚫O⚫O⚫O.svg" width="140px" height="242px" preserveAspectRatio="xMinYMin meet" x="595" y="-1317"/>
+</g>
+<!-- CNCC(c1ccc(c(c1)O)O)O&#45;&gt;CNCCc1ccc(c(c1)O)O -->
+<g id="edge3" class="edge">
+<title>CNCC(c1ccc(c(c1)O)O)O&#45;&gt;CNCCc1ccc(c(c1)O)O</title>
+<path fill="none" stroke="#000000" d="M707.0511,-1074.9911C714.1712,-1054.502 721.4445,-1033.5719 728.2076,-1014.1101"/>
+<polygon fill="#000000" stroke="#000000" points="729.9156,-1009.195 730.3996,-1014.6566 729.0949,-1011.5565 728.2743,-1013.918 728.2743,-1013.918 728.2743,-1013.918 729.0949,-1011.5565 726.149,-1013.1794 729.9156,-1009.195 729.9156,-1009.195"/>
+</g>
+<!-- CNCC(c1ccc(c(c1)O)O)O&#45;&gt;NCC(c1ccc(c(c1)O)O)O -->
+<g id="edge4" class="edge">
+<title>CNCC(c1ccc(c(c1)O)O)O&#45;&gt;NCC(c1ccc(c(c1)O)O)O</title>
+<path fill="none" stroke="#000000" d="M594.9081,-1082.0347C592.0259,-1079.549 589.0564,-1077.1954 586,-1075 534.1695,-1037.7698 499.3768,-1075.4577 447,-1039 445.3775,-1037.8706 443.7775,-1036.6964 442.2005,-1035.4815"/>
+<polygon fill="#000000" stroke="#000000" points="438.0796,-1032.1733 443.3872,-1033.5488 440.0291,-1033.7383 441.9786,-1035.3034 441.9786,-1035.3034 441.9786,-1035.3034 440.0291,-1033.7383 440.5701,-1037.058 438.0796,-1032.1733 438.0796,-1032.1733"/>
+</g>
+<!-- NCCC=CC=CCO&#45;&gt;NCCC=CC=CC -->
+<g id="edge32" class="edge">
+<title>NCCC=CC=CCO&#45;&gt;NCCC=CC=CC</title>
+<path fill="none" stroke="#000000" d="M745.9201,-172.9465C717.1957,-152.9894 684.512,-130.2814 655.4111,-110.0627"/>
+<polygon fill="#000000" stroke="#000000" points="651.1444,-107.0983 656.5344,-108.1034 653.1975,-108.5248 655.2506,-109.9512 655.2506,-109.9512 655.2506,-109.9512 653.1975,-108.5248 653.9668,-111.799 651.1444,-107.0983 651.1444,-107.0983"/>
+</g>
+<!-- CNCCc1ccc(c(c1)O)O&#45;&gt;CNCCC=CC=C(CO)O -->
+<g id="edge15" class="edge">
+<title>CNCCc1ccc(c(c1)O)O&#45;&gt;CNCCC=CC=C(CO)O</title>
+<path fill="none" stroke="#000000" d="M780.2411,-841.8843C789.0571,-807.1799 799.0767,-767.7379 807.0911,-736.189"/>
+<polygon fill="#000000" stroke="#000000" points="808.3596,-731.1954 809.3093,-736.5954 807.7441,-733.6184 807.1285,-736.0414 807.1285,-736.0414 807.1285,-736.0414 807.7441,-733.6184 804.9478,-735.4874 808.3596,-731.1954 808.3596,-731.1954"/>
+</g>
+<!-- CNCCc1ccc(c(c1)O)O&#45;&gt;NCCc1ccc(c(c1)O)O -->
+<g id="edge16" class="edge">
+<title>CNCCc1ccc(c(c1)O)O&#45;&gt;NCCc1ccc(c(c1)O)O</title>
+<path fill="none" stroke="#000000" d="M700.6713,-841.8843C686.9344,-822.1921 672.1334,-800.9745 657.8781,-780.5391"/>
+<polygon fill="#000000" stroke="#000000" points="654.845,-776.1912 659.5511,-779.0047 656.2754,-778.2416 657.7057,-780.292 657.7057,-780.292 657.7057,-780.292 656.2754,-778.2416 655.8604,-781.5793 654.845,-776.1912 654.845,-776.1912"/>
+</g>
+<!-- NCCC=CC=C(O)C&#45;&gt;NCCC=CC=CC -->
+<g id="edge29" class="edge">
+<title>NCCC=CC=C(O)C&#45;&gt;NCCC=CC=CC</title>
+<path fill="none" stroke="#000000" d="M574,-157.6287C574,-142.6908 574,-127.0204 574,-112.5033"/>
+<polygon fill="#000000" stroke="#000000" points="574,-107.2105 576.2501,-112.2105 574,-109.7105 574.0001,-112.2105 574.0001,-112.2105 574.0001,-112.2105 574,-109.7105 571.7501,-112.2105 574,-107.2105 574,-107.2105"/>
+</g>
+<!-- NCC(c1ccc(c(c1)O)O)O&#45;&gt;NCCc1ccc(c(c1)O)O -->
+<g id="edge18" class="edge">
+<title>NCC(c1ccc(c(c1)O)O)O&#45;&gt;NCCc1ccc(c(c1)O)O</title>
+<path fill="none" stroke="#000000" d="M438.1589,-822.7159C441.0918,-819.058 444.0441,-815.4743 447,-812 463.0138,-793.1778 481.3077,-774.0621 499.2474,-756.3771"/>
+<polygon fill="#000000" stroke="#000000" points="502.8298,-752.8597 500.8384,-757.9683 501.0459,-754.6112 499.262,-756.3628 499.262,-756.3628 499.262,-756.3628 501.0459,-754.6112 497.6856,-754.7573 502.8298,-752.8597 502.8298,-752.8597"/>
 </g>
 </g>
 </svg>
