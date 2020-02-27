@@ -4,3 +4,4 @@ pickles
 
 hasse/plots/*
 !hasse/plots/*.svg
+!hasse/plots/molecules
