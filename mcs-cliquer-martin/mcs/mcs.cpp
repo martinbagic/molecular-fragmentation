@@ -142,7 +142,8 @@ int main(int argc, char **argv)
 	// 			next++;
 	// 	}
 	// }
-	cout << endl << "size = " << results.size() << endl;
+	cout << endl
+		 << "size = " << results.size() << endl;
 
 	// read and print
 
@@ -250,56 +251,99 @@ void run_cliquer_martin(const graph &P, const neighborhood &N, vector<graph> &MM
 			}
 			graph_free(g);
 		}
+		// {
+		// 	// from mono run cliquer
+		// 	// if (edge_exists)
+		// 	// {
+		// 	// 	set_t s = clique_find_single(g, 0, 0, TRUE, NULL);
+		// 	// 	for (int i = 0; i < SET_MAX_SIZE(s); i++)
+		// 	// 		if (SET_CONTAINS(s, i))
+		// 	// 		{
+		// 	// 			uv u = int_to_uv[i];
+		// 	// 			M.insert(u);
+		// 	// 		}
+		// 	// 	set_free(s);
+		// 	// }
+		// 	// graph_free(g);
+
+		// 	// cout << "maca" << endl;
+
+		// 	int n;
+		// 	n = clique_unweighted_find_all(g, 0, 0, TRUE, NULL);
+		// 	cout << "n is " << n << endl;
+		// 	int max_cliques = 1024; // was 1024
+		// 	set_t s[max_cliques];
+		// 	clique_default_options->clique_list = s;
+		// 	clique_default_options->clique_list_length = 1024; // was 1024
+
+		// 	cout << "start loop" << endl;
+		// 	for (int i = 0; i < n; i++)
+		// 	{
+		// 		cout << "ma " << n << " ";
+		// 		graph M;
+		// 		for (int j = 0; j < SET_MAX_SIZE(s[i]); j++)
+		// 			if (SET_CONTAINS(s[i], j))
+		// 			{
+		// 				uv u = int_to_uv[j];
+		// 				M.insert(u);
+		// 			}
+		// 		MM.push_back(M);
+		// 		set_free(s[i]);
+		// 		cout << "macarena" << i << endl;
+		// 	}
+		// 	cout << "macarena finale" << endl;
+		// 	graph_free(g);
+		// }
 	}
 }
 
-// void run_cliquer(const graph &P, const neighborhood &N, graph &M)
-// {
-// 	if (P.size() > 0)
-// 	{
-// 		graph_t *g = graph_new(P.size());
+void run_cliquer(const graph &P, const neighborhood &N, graph &M)
+{
+	if (P.size() > 0)
+	{
+		graph_t *g = graph_new(P.size());
 
-// 		boost::unordered_map<uv, int> uv_to_int;
-// 		vector<uv> int_to_uv;
-// 		int n = 0;
-// 		for (graph::iterator i = P.begin(); i != P.end(); i++)
-// 		{
-// 			uv_to_int[*i] = n++;
-// 			int_to_uv.push_back(*i);
-// 		}
+		boost::unordered_map<uv, int> uv_to_int;
+		vector<uv> int_to_uv;
+		int n = 0;
+		for (graph::iterator i = P.begin(); i != P.end(); i++)
+		{
+			uv_to_int[*i] = n++;
+			int_to_uv.push_back(*i);
+		}
 
-// 		bool edge_exists = false;
-// 		for (graph::iterator i = P.begin(); i != P.end(); i++)
-// 		{
-// 			neighborhood::const_iterator ni = N.find(*i);
-// 			if (ni == N.end())
-// 				continue;
-// 			graph E = ni->second;
-// 			int first = uv_to_int[*i];
-// 			for (graph::iterator j = E.begin(); j != E.end(); j++)
-// 			{
-// 				int second = uv_to_int[*j];
-// 				if (second > first)
-// 				{
-// 					GRAPH_ADD_EDGE(g, first, second);
-// 					edge_exists = true;
-// 				}
-// 			}
-// 		}
-// 		if (edge_exists)
-// 		{
-// 			set_t s = clique_find_single(g, 0, 0, TRUE, NULL);
-// 			for (int i = 0; i < SET_MAX_SIZE(s); i++)
-// 				if (SET_CONTAINS(s, i))
-// 				{
-// 					uv u = int_to_uv[i];
-// 					M.insert(u);
-// 				}
-// 			set_free(s);
-// 		}
-// 		graph_free(g);
-// 	}
-// }
+		bool edge_exists = false;
+		for (graph::iterator i = P.begin(); i != P.end(); i++)
+		{
+			neighborhood::const_iterator ni = N.find(*i);
+			if (ni == N.end())
+				continue;
+			graph E = ni->second;
+			int first = uv_to_int[*i];
+			for (graph::iterator j = E.begin(); j != E.end(); j++)
+			{
+				int second = uv_to_int[*j];
+				if (second > first)
+				{
+					GRAPH_ADD_EDGE(g, first, second);
+					edge_exists = true;
+				}
+			}
+		}
+		if (edge_exists)
+		{
+			set_t s = clique_find_single(g, 0, 0, TRUE, NULL);
+			for (int i = 0; i < SET_MAX_SIZE(s); i++)
+				if (SET_CONTAINS(s, i))
+				{
+					uv u = int_to_uv[i];
+					M.insert(u);
+				}
+			set_free(s);
+		}
+		graph_free(g);
+	}
+}
 
 void create_modular_product_mces(OBMol &mol1, OBMol &mol2, graph &V, neighborhood &N)
 {
