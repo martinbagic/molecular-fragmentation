@@ -7,7 +7,6 @@ import logging
 def get_mcs(smiles1, smiles2):
     ''' Run mcs-cliquer over cmd. '''
 
-
     args = [helper.MCS_PATH, smiles1, smiles2]
     r = subprocess.run(args, stdout=subprocess.PIPE)
 
@@ -17,8 +16,8 @@ def get_mcs(smiles1, smiles2):
     for line in stdout.split('\n'):
         if line.startswith('rEsUlT'):
             mol = line.split()[1].strip()
-            smiles3.append(mol)
-
+            if mol not in smiles3:
+                smiles3.append(mol)
 
     return smiles3
 
@@ -32,6 +31,7 @@ class Canonicalizer:
     def __init__(self):
         self.pairs = dict()
         self.splittings = dict()
+        self.do_split = True
 
     def __call__(self, smiles):
         if smiles not in self.pairs:
@@ -44,7 +44,9 @@ class Canonicalizer:
             canonical_smiles = canonical_smiles.replace(
                 '/', '').replace('\\', '').replace('@', '')
 
-            # canonical_smiles = self.biggest(canonical_smiles)
+            if self.do_split:
+                canonical_smiles = self.biggest(canonical_smiles)
+
             self.pairs[smiles] = canonical_smiles
 
         return self.pairs[smiles]
