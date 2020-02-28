@@ -2,7 +2,7 @@ import yaml
 import argparse
 import pickle
 
-from funcs import plot, poset, tranclo, genfuncs, hack
+from funcs import plot, poset, tranclo, genfuncs, hack, validate
 from helper import PATH
 import logging
 
@@ -25,6 +25,9 @@ class Hasse:
         else:
             self.set_poset()
             self.set_transitive_closure()
+
+        if self.args.validate:
+            validate.validate_tranclo(self.tranclo)
 
         if self.args.plot_poset:
             self.plot('poset')
@@ -60,6 +63,10 @@ class Hasse:
 
         parser.add_argument(
             '-l', '--log', help="enable logging", action='store_true'
+        )
+
+        parser.add_argument(
+            '-v', '--validate', help="enable validation", action='store_true'
         )
 
         self.args = parser.parse_args()
@@ -106,6 +113,8 @@ class Hasse:
         with open(path, 'rb') as file:
             obj = pickle.load(file)
             setattr(self, attr, obj)
+
+        print(attr, getattr(self, attr))
 
     def write_pickle(self, attr):
         ''' Write fresh calculated data. '''
