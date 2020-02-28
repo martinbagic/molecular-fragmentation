@@ -4,6 +4,10 @@ from collections import defaultdict
 import logging
 
 
+def alpha_len(s):
+    return sum(x.isalpha() for x in s)
+
+
 class Poset:
     def __init__(self, genfunc, roots, canonicalizer):
         self.genfunc = genfunc
@@ -36,11 +40,22 @@ class Poset:
                 xs = self.genfunc(a, b)
 
                 if self.canonicalizer:
-                    xs = [self.canonicalizer(x) for x in set(xs)]
-                    # maxlen = max(len(x) for x in xs)
-                    # xs = [x for x in xs if len(x) == maxlen]
+                    if xs:
+                        canonicalized = [self.canonicalizer(x) for x in xs] + ['']
+                        maxlen = max(alpha_len(x) for x in canonicalized)
+                        xs = set(x for x in canonicalized if alpha_len(x) == maxlen)
+                    else:
+                        xs = {''}
+
+                print(a, b, xs)
 
                 for x in xs:
+                    if x == a == b:
+                        logging.error('x == a == b')
+                        continue
+
+                    if x == '':
+                        logging.debug("x == ''")
 
                     if a == x:  # a = x < b; b is a parent of a
                         C[b].add(a)
@@ -85,7 +100,7 @@ class Poset:
 
                         if x not in to_add:  # if node is new, add to graph
                             to_add.append(x)
-                            print(a, b, x)
+                            # print(a, b, x)
 
             added.append(a)
 
