@@ -76,6 +76,7 @@ class Hasse:
         with open(PATH('input.yaml'), 'r') as file:
             yml = yaml.safe_load(file)
 
+        assert self.args.instance in yml, f"Instance '{self.args.instance}' does not exist in the input.yaml."
         instance = yml[self.args.instance]
         self.mode = instance['mode']
         self.roots = instance['roots']
