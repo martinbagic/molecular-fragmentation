@@ -38,7 +38,16 @@ class Hasse:
     ### PREPARATION ###
 
     def set_logging(self):
-        if self.args.log:
+
+        level = self.args.log
+        assert level in (
+            None,
+            "INFO",
+            "DEBUG",
+            "ERROR",
+        ), f"'{level}' is invalid logging level."
+
+        if level:
             logging.basicConfig(
                 level=logging.DEBUG,
                 format='%(asctime)s --- %(levelname)s ::: %(message)s',
