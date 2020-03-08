@@ -32,6 +32,7 @@ class Canonicalizer:
         self.pairs = dict()
         self.splittings = dict()
         self.do_split = True
+        self.min_length = 3
 
     def __call__(self, smiles):
         if smiles not in self.pairs:
@@ -51,10 +52,39 @@ class Canonicalizer:
 
         return self.pairs[smiles]
 
-    def biggest(self, smiles):
-        if smiles not in self.splittings:
-            self.splittings[smiles] = max(
-                smiles.split('.'),
-                key=lambda s: sum(c.isalpha() for c in s)
-            )
-        return self.splittings[smiles]
+    def split(self, smiles_list):
+        """
+        If all are disconnected, split all and return biggest fragment.
+        If some are disconnected, return all connected.
+        If none are disconnected, return all connected.
+        """
+
+        char_count = lambda s: sum(char.isalpha() for char in s)
+
+        all_disconnected = all("." in smiles for smiles in smiles_list)
+
+        if all_disconnected:
+            frags = {
+                frag
+                for smiles in smiles_list
+                for frag in smiles.split(".")
+                if char_count(frag) >= self.min_length
+            }
+            return [max(frags, key=char_count)]
+
+        else:
+
+            all_connected = all("." not in smiles for smiles in smiles_list)
+            if all_connected:
+                return [
+                    smiles
+                    for smiles in smiles_list
+                    if char_count(smiles) >= self.min_length
+                ]
+
+            else:
+                return [
+                    smiles
+                    for smiles in smiles_list
+                    if "." not in smiles and char_count(smiles) >= self.min_length
+                ]
