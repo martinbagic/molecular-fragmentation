@@ -25,7 +25,10 @@ class Poset:
         added = []
 
         while to_add:
-            logging.debug(f'{len(added):^3} / {len(to_add)+len(added):^3}')
+
+            logging.debug(
+                f"{len(added):^3} / {len(to_add)+len(added):^3} ~ {len(added)/(len(to_add)+len(added))*100:3.0f} %"
+            )
 
             a = to_add.pop(0)  # new node (a)
 
@@ -34,28 +37,30 @@ class Poset:
             while resolve:
                 b = resolve.pop(0)
 
-                if b in S[a] or b in P[a] or b in C[a]:  # relationship already investigated
+                # relationship already investigated
+                if b in S[a] or b in P[a] or b in C[a]:
                     continue
 
+                # call generating function
                 xs = self.genfunc(a, b)
 
+                # canonicalize if necessary
                 if self.canonicalizer:
                     if xs:
-                        canonicalized = [self.canonicalizer(x) for x in xs] + ['']
-                        maxlen = max(alpha_len(x) for x in canonicalized)
-                        xs = set(x for x in canonicalized if alpha_len(x) == maxlen)
-                    else:
-                        xs = {''}
+                        canonicalized = set(self.canonicalizer(x) for x in xs)
+                        xs = set(
+                            self.canonicalizer.split(
+                                smiles_list=canonicalized,
+                                from_roots=(a in self.roots and b in self.roots),
+                            )
+                        )
 
-                print(a, b, xs)
+                    else:
+                        logging.error(f'"{a}" "{b}" generated nothing.')
 
                 for x in xs:
                     if x == a == b:
-                        logging.error('x == a == b')
                         continue
-
-                    if x == '':
-                        logging.debug("x == ''")
 
                     if a == x:  # a = x < b; b is a parent of a
                         C[b].add(a)
@@ -100,7 +105,6 @@ class Poset:
 
                         if x not in to_add:  # if node is new, add to graph
                             to_add.append(x)
-                            # print(a, b, x)
 
             added.append(a)
 
