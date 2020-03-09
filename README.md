@@ -29,15 +29,15 @@ The project provides numerous instances for different partial orders:
 To run the first example and plot the results, simply run:
 
 ```
-python3 hasse/hasse.py -t gcd1
+python3 molfrag/molfrag.py -t gcd1
 ```
 
 If you wish to use the precalculated data for the provided examples, simply include the -r flag:
 ```
-python3 hasse/hasse.py -rt gcd1
+python3 molfrag/molfrag.py -rt gcd1
 ```
 
-To run custom examples, add data to the `hasse/input.yaml`:
+To run custom examples, add data to the `molfrag/input.yaml`:
 1. Specify the root nodes in the _definitions_ section.
 2. Specify instance attributes in the _instances_ section.
    - _mode_ = partial order

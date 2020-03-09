@@ -7,7 +7,7 @@ from helper import PATH
 import logging
 
 
-class Hasse:
+class MolFrag:
     def __init__(self):
         """
         1) Load arguments. 
@@ -180,4 +180,4 @@ class Hasse:
 
 
 if __name__ == "__main__":
-    Hasse()
+    MolFrag()
