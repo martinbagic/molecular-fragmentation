@@ -1,8 +1,8 @@
-# Molecular fragmentation using maximum common subgraph
+# Molecular Fragmentation by MCS
 
 In chemistry, molecular structure dictates molecular function. Thus, recognizing structural similarities between molecules as well as recognizing the presence and distinctiveness of structural motifs is of particular interest.
 
-This project attempts to generate molecular fragments by decomposing an initial set of molecules using the [maximum common subgraph](#definitions). Subsequently, it organizes the resulting fragments in a hierarchy determined by the implicit partial order.
+This project attempts to generate molecular fragments by decomposing an initial set of molecules using the [maximum common subgraph](#definitions)(MCS). Subsequently, it organizes the resulting fragments in a hierarchy determined by the implicit partial order.
 
 > Maximum common subgraph is the [maximum clique](#definitions) of a [modular graph product](#definitions).
 
