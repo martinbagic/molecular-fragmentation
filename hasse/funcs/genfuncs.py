@@ -3,7 +3,7 @@ from . import hack
 
 
 def get_greatest_common_divisor(a, b):
-    return math.gcd(a, b)
+    return [math.gcd(a, b)]
 
 
 def get_longest_substring(a, b):
@@ -13,11 +13,11 @@ def get_longest_substring(a, b):
         for j in range(i, len(a)+1)
         if a[i:j] in b
     ] + ['']
-    return max(candidates, key=lambda x: len(x))
+    return [max(candidates, key=lambda x: len(x))]
 
 
 def get_common_letters(a, b):
-    return ''.join(sorted(set(a) & set(b)))
+    return [''.join(sorted(set(a) & set(b)))]
 
 
 genfuncs = {
