@@ -29,7 +29,7 @@ smiles2: &smiles2 [
     "C1OC2=C(O1)C=C(C=C2)C(C(=N)N)O", # olmidine
   ]
 
-smiles3: &smiles3 [
+smiles3: &smiles3 [ # hormones and drugs
     "CNCC(C1=CC(=C(C=C1)O)O)O", # adrenaline
     "CN1CCC2=C3C1CC4=C(C3=CC=C2)C(=C(C=C4)O)O", # apomorphine
     "C1CNCC(C2=CC(=C(C(=C21)Cl)O)O)C3=CC=C(C=C3)O", # fenoldopam
@@ -40,6 +40,29 @@ smiles3: &smiles3 [
     "CC12CCC(=O)CC1CCC3C2CCC4(C3CCC4O)C", # dihydrotestosterone
     "CC(=O)C1CCC2C1(CCC3C2CCC4=CC(=O)CCC34C)C", # progesterone
   ]
+
+smiles4: &smiles4 [ # https://www.tbi.univie.ac.at/~xtof/Leere/269019/exercise01.pdf
+  "CC1(C2CCC(C2)(C1O)C)C", # fenchol
+  "CC1(C2CCC(=C)C1C2)C", # beta-pinene
+  "CC1=CCC(=C(C)C)CC1", # terpinolene
+  "CC1=CCC(CC1)C(=C)C", # limonene
+  "CC1=CCC2C(C1)C2(C)C", # car-3-ene
+  "CC1=CCC(CC1)C(C)(C)O", # alpha-terpineol
+  "CC1(C2CCC(O1)(CC2)C)C", # 1,8-cineol
+  "CC1=CCC(C=C1)C(C)C", # alpha-phellandrene
+  "CC1=CCC(=CC1)C(C)C", # gamma-terpinene
+]
+
+smiles5: &smiles5 [ # painkillers
+  "CC(C)CC1=CC=C(C=C1)C(C)C(=O)O", # ibuprofen
+  "CC(=O)NC1=CC=C(C=C1)O", # paracetamol
+  "CNCCC(C1=CC=CS1)OC2=CC=CC3=CC=CC=C32", # duloxetine
+  "CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(=O)CC4", # hydrocodone
+  "CCC(=O)N(C1CCN(CC1)CCC2=CC=CC=C2)C3=CC=CC=C3", # fentanyl
+  "CCC(=O)C(CC(C)N(C)C)(C1=CC=CC=C1)C2=CC=CC=C2", # methadone
+  "CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O", # morphine
+  "CCCCCC1=CC(=C(C(=C1)O)C2C=C(CCC2C(=C)C)C)O", # cannabidiol
+]
 
 ### INSTANCES ###
 gcd1:
@@ -71,4 +94,14 @@ mcs2:
 mcs3:
   mode: mcs
   roots: *smiles3
+  canonicalize: true
+
+mcs4:
+  mode: mcs
+  roots: *smiles4
+  canonicalize: true
+
+mcs5:
+  mode: mcs
+  roots: *smiles5
   canonicalize: true
