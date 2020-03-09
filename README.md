@@ -1,18 +1,20 @@
 # Molecular fragmentation using maximum common subgraph
 
-## Motivation
-
 In chemistry, molecular structure dictates molecular function. Thus, recognizing structural similarities between molecules as well as recognizing the presence and distinctiveness of structural motifs is of particular interest.
 
 This project attempts to generate molecular fragments by decomposing an initial set of molecules using the [maximum common subgraph](#definitions). Subsequently, it organizes the resulting fragments in a hierarchy determined by the implicit partial order.
 
-Maximum common subgraph is the [maximum clique](#definitions) of a [modular graph product](#definitions).
+> Maximum common subgraph is the [maximum clique](#definitions) of a [modular graph product](#definitions).
 
 <!-- ## Flowchart -->
 
-## Dependencies
+## Get started (Linux)
+To get started, create a virtual environment and necessary Python libraries by running:
+```
+. prepare.sh
+```
+The project uses C++, Python3 and its libraries `PyYAML` and `graphviz`.
 
-The project uses C++ and Python3.
 
 ## Usage example
 
@@ -23,10 +25,16 @@ The project provides numerous instances for different partial orders:
 - inclusion of letters `common1`
 - maximum common subgraph `mcs1` `mcs2` `mcs3` `mcs4` `mcs5`
 
-To run the first example, simply run
+
+To run the first example and plot the results, simply run:
 
 ```
-python3 hasse.py -t gcd1
+python3 hasse/hasse.py -t gcd1
+```
+
+If you wish to use the precalculated data for the provided examples, simply include the -r flag:
+```
+python3 hasse.py -rt gcd1
 ```
 
 To run custom examples, add data to the `input.yaml`:
@@ -38,7 +46,7 @@ To run custom examples, add data to the `input.yaml`:
 
 ## Limitations and issues
 
-### 1. _Cliquer_ considers **disconnected** subgraphs.
+### _Cliquer_ considers **disconnected** subgraphs.
 
 Disconnected subgraphs are not relevant in this context (we are not interested in matching separated molecular fragments). In order to tackle this problem, `mcs` was modified to return all (well, <a id="a1">[not _all_ but many](#all-solutions)</a>) solutions, not just one. This increases our chance of finding connected subgraphs, but we will still need to handle the disconnected subgraphs. There are three different scenarios:
 
@@ -59,15 +67,27 @@ The choice is such because running `mcs` on two big molecules tends to return on
 
 <h3 id="all-solutions">
 
-2\. `mcs` does not return all the solutions
+`mcs` does not return all the solutions
 
 </h3>
 
-Currently, the maximum number of returned solutions is 1024, as is specified in the `mcs.cpp` in the line `int max_cliques = 1024;`.
+Currently, the maximum number of returned solutions is 1024, as is specified in the `mcs.cpp` in the line 
+```
+int max_cliques = 1024
+```
 
 This limit is important for tractability reasons.
 
 As long as at least one solution is a connected subgraph, this limit is benign and will simply result in a smaller output lattice. However, if there are many disconnected subgraph solutions, it could happen that no connected subgraph solution is returned, which further causes the issues described above.
+
+<sub>
+<sup>
+
+Note that an additional condition (`i < max_cliques`) has been added to `mcs.cpp` for-loop in line 249.
+This is because it is possible that `n` is greater than `max_cliques`, but letting `i` grow bigger than `max_cliques` leads to a _Segmentation fault (core dumped)_ error.
+
+</sup>
+</sub>
 
 ## Potential improvements
 
