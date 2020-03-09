@@ -61,20 +61,31 @@ class Hasse:
         parser.add_argument("instance", help="name of instance", type=str)
 
         parser.add_argument(
-            "-r", "--read-pickle", help="plot only", action="store_true"
+            "-r",
+            "--read-pickle",
+            help="read saved calculations from a pickle",
+            action="store_true",
         )
         parser.add_argument(
-            "-w", "--write-pickle", help="pickle calculations", action="store_true"
+            "-w",
+            "--write-pickle",
+            help="save calculations in a pickle",
+            action="store_true",
         )
 
         parser.add_argument(
-            "-g", "--plot-poset", help="plot poset", action="store_true",
+            "-g", "--plot-poset", help="plot partial order", action="store_true",
         )
         parser.add_argument(
             "-t", "--plot-tranclo", help="plot transitive closure", action="store_true"
         )
 
-        parser.add_argument("-l", "--log", help="specify logging level", action="store")
+        parser.add_argument(
+            "-l",
+            "--log",
+            help="specify logging level (DEBUG < INFO < ERROR)",
+            action="store",
+        )
 
         parser.add_argument(
             "-v", "--validate", help="enable validation", action="store_true"
