@@ -91,7 +91,7 @@ class Poset:
                         for c in C[b]:  # all children of b are children of a
                             P[c].add(a)
                             C[a].add(c)
-                            if p in resolve:
+                            if c in resolve:
                                 resolve.remove(c)
 
                     else:  # a > x < b; a and b are siblings and x their child
