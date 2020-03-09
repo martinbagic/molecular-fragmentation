@@ -23,7 +23,7 @@ def get_mcs(smiles1, smiles2):
 
 
 def draw_smiles(smiles, path):
-    s = f'obabel -:"{smiles}" -o svg > "{path}"'
+    s = f'obabel -:"{smiles}" -O "{path}"'
     subprocess.run(s, shell=True, stderr=subprocess.DEVNULL)
 
 
