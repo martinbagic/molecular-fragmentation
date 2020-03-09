@@ -67,7 +67,7 @@ The choice is such because running `mcs` on two big molecules tends to return on
 
 <h3 id="all-solutions">
 
-`mcs` does not return all the solutions
+`mcs` does not return all the solutions.
 
 </h3>
 
