@@ -1,7 +1,2 @@
 __pycache__
-
-pickles
-
-hasse/plots/*
-!hasse/plots/*.svg
-!hasse/plots/molecules
+settings.json
