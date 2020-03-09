@@ -2,7 +2,7 @@
 
 In chemistry, molecular structure dictates molecular function. Thus, recognizing structural similarities between molecules as well as recognizing the presence and distinctiveness of structural motifs is of particular interest.
 
-This project attempts to generate molecular fragments by decomposing an initial set of molecules using the [maximum common subgraph](#definitions)(MCS). Subsequently, it organizes the resulting fragments in a hierarchy determined by the implicit partial order.
+This project attempts to generate molecular fragments by decomposing an initial set of molecules using the [maximum common subgraph](#definitions) (MCS). Subsequently, it organizes the resulting fragments in a hierarchy determined by the implicit partial order.
 
 > Maximum common subgraph is the [maximum clique](#definitions) of a [modular graph product](#definitions).
 
@@ -11,11 +11,10 @@ This project attempts to generate molecular fragments by decomposing an initial 
 ## Get started (Linux)
 To get started, run the following commands:
 ```
-cd cheminf
 . get_started.sh
 ```
 
-The `get_started.sh` script will install a Python virtual environment `.env`, activate it, and install the necessary Python libraries (`PyYAML` and `graphviz`). It will also export the current directory to the `$PATH` variable.
+This bash script will install a Python virtual environment `.env`, activate it, and install the necessary Python libraries (`PyYAML` and `graphviz`).
 
 ## Usage example
 
@@ -30,15 +29,15 @@ The project provides numerous instances for different partial orders:
 To run the first example and plot the results, simply run:
 
 ```
-cheminf -t gcd1
+python3 hasse/hasse.py -t gcd1
 ```
 
 If you wish to use the precalculated data for the provided examples, simply include the -r flag:
 ```
-cheminf -rt gcd1
+python3 hasse/hasse.py -rt gcd1
 ```
 
-To run custom examples, add data to the `input.yaml`:
+To run custom examples, add data to the `hasse/input.yaml`:
 1. Specify the root nodes in the _definitions_ section.
 2. Specify instance attributes in the _instances_ section.
    - _mode_ = partial order
