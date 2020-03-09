@@ -122,28 +122,39 @@ int main(int argc, char **argv)
 
 	// get unique strings
 
-	// set<string> smiles;
-	// for (OBMol result : results)
-	// 	smiles.insert(stringify(result));
-	// for (string s : smiles) cout << s;
+	bool getUniqueStrings = false;
+	if (getUniqueStrings)
+	{
+		set<string> smiles;
+		for (OBMol result : results)
+			smiles.insert(stringify(result));
+		for (string s : smiles)
+			cout << s;
+	}
 
 	// filter
 
-	// cout << "1. size = " << smiles.size() << "!!!" << endl;
-	// for (auto iter = results.begin(); iter != results.end(); iter++)
-	// {
-	// 	for (auto next = std::next(iter); next != results.end();)
-	// 	{
-	// 		if (are_isomorphic(*iter, *next))
-	// 		{
-	// 			next = results.erase(next);
-	// 		}
-	// 		else
-	// 			next++;
-	// 	}
-	// }
+	bool doFilter = false;
+	if (doFilter)
+	{
+		for (auto iter = results.begin(); iter != results.end(); iter++)
+		{
+			for (auto next = std::next(iter); next != results.end();)
+			{
+				if (are_isomorphic(*iter, *next))
+				{
+					next = results.erase(next);
+				}
+				else
+					next++;
+			}
+		}
+	}
+
 	cout << endl
-		 << "size = " << results.size() << endl;
+		 << "number of results = "
+		 << results.size()
+		 << endl;
 
 	// read and print
 
@@ -154,20 +165,18 @@ int main(int argc, char **argv)
 	{
 		conv.Read(&result);
 		string str = conv.WriteString(&result, true);
-		bool OnlyConnected = true; // martin
+		bool OnlyConnected = false; // martin
 		if (OnlyConnected)
 		{
 			auto found = str.find(".");
 			if (found != std::string::npos)
 			{
-				// cout << str << endl;
 				continue;
 			}
 		}
 		unsigned int bondsm = result.NumBonds();
 		double similarity = (double)bondsm / (bonds1 + bonds2 - bondsm);
-		// cout << str << " " << similarity << " (MCES)" << endl;
-		cout << "rEsUlT " << str << endl;
+		cout << "rEsUlT " << str << endl; // using rEsUlT to identify relevant lines in Python3
 	}
 
 	return (0);
@@ -235,65 +244,24 @@ void run_cliquer_martin(const graph &P, const neighborhood &N, vector<graph> &MM
 			int max_cliques = 1024;
 			set_t s[max_cliques];
 			clique_default_options->clique_list = s;
-			clique_default_options->clique_list_length = 1024;
+			clique_default_options->clique_list_length = max_cliques;
 			n = clique_unweighted_find_all(g, 0, 0, TRUE, NULL);
-			for (int i = 0; i < n; i++)
+			for (int i = 0; i < n && i < max_cliques; i++) // added i < max_cliques
 			{
 				graph M;
 				for (int j = 0; j < SET_MAX_SIZE(s[i]); j++)
+				{
 					if (SET_CONTAINS(s[i], j))
 					{
 						uv u = int_to_uv[j];
 						M.insert(u);
 					}
+				}
 				MM.push_back(M);
 				set_free(s[i]);
 			}
 			graph_free(g);
 		}
-		// {
-		// 	// from mono run cliquer
-		// 	// if (edge_exists)
-		// 	// {
-		// 	// 	set_t s = clique_find_single(g, 0, 0, TRUE, NULL);
-		// 	// 	for (int i = 0; i < SET_MAX_SIZE(s); i++)
-		// 	// 		if (SET_CONTAINS(s, i))
-		// 	// 		{
-		// 	// 			uv u = int_to_uv[i];
-		// 	// 			M.insert(u);
-		// 	// 		}
-		// 	// 	set_free(s);
-		// 	// }
-		// 	// graph_free(g);
-
-		// 	// cout << "maca" << endl;
-
-		// 	int n;
-		// 	n = clique_unweighted_find_all(g, 0, 0, TRUE, NULL);
-		// 	cout << "n is " << n << endl;
-		// 	int max_cliques = 1024; // was 1024
-		// 	set_t s[max_cliques];
-		// 	clique_default_options->clique_list = s;
-		// 	clique_default_options->clique_list_length = 1024; // was 1024
-
-		// 	cout << "start loop" << endl;
-		// 	for (int i = 0; i < n; i++)
-		// 	{
-		// 		cout << "ma " << n << " ";
-		// 		graph M;
-		// 		for (int j = 0; j < SET_MAX_SIZE(s[i]); j++)
-		// 			if (SET_CONTAINS(s[i], j))
-		// 			{
-		// 				uv u = int_to_uv[j];
-		// 				M.insert(u);
-		// 			}
-		// 		MM.push_back(M);
-		// 		set_free(s[i]);
-		// 		cout << "macarena" << i << endl;
-		// 	}
-		// 	cout << "macarena finale" << endl;
-		// 	graph_free(g);
-		// }
 	}
 }
 
