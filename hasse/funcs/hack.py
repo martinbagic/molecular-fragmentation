@@ -50,7 +50,7 @@ class Canonicalizer:
 
         return self.pairs[smiles]
 
-    def split(self, smiles_list):
+    def split(self, smiles_list, from_roots):
         """
         If all are disconnected, split all and return biggest fragment.
         If some are disconnected, return all connected.
@@ -62,12 +62,16 @@ class Canonicalizer:
         all_disconnected = all("." in smiles for smiles in smiles_list)
 
         if all_disconnected:
+            if not from_roots:
+                return []
             frags = {
                 frag
                 for smiles in smiles_list
                 for frag in smiles.split(".")
                 if char_count(frag) >= self.min_length
             }
+            if not frags:
+                return []
             return [max(frags, key=char_count)]
 
         else:
