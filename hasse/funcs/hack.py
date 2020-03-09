@@ -31,7 +31,7 @@ class Canonicalizer:
     def __init__(self):
         self.pairs = dict()
         self.do_split = True
-        self.min_length = 3
+        self.min_length = 7
 
     def __call__(self, smiles):
         if smiles not in self.pairs:
