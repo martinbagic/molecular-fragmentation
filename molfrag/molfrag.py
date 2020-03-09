@@ -56,7 +56,7 @@ class MolFrag:
 
     def set_args(self):
         """ Read arguments from cmd. """
-        parser = argparse.ArgumentParser("hasse.py")
+        parser = argparse.ArgumentParser("molfrag.py")
 
         parser.add_argument("instance", help="name of instance", type=str)
 

@@ -7,7 +7,7 @@ def PATH(s):
     else:
         return os.path.join(base_dir, *s)
 
-MCS_PATH = PATH(['..','mcs-cliquer-martin','mcs','mcs'])
+MCS_PATH = PATH(['..','mcs-cliquer~','mcs','mcs'])
 
 
 DIGRAPH_SETTINGS = {
