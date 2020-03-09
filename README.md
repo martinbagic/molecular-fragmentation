@@ -34,7 +34,7 @@ python3 hasse/hasse.py -t gcd1
 
 If you wish to use the precalculated data for the provided examples, simply include the -r flag:
 ```
-python3 hasse.py -rt gcd1
+python3 hasse/hasse.py -rt gcd1
 ```
 
 To run custom examples, add data to the `input.yaml`:
