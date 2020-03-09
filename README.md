@@ -9,12 +9,13 @@ This project attempts to generate molecular fragments by decomposing an initial 
 <!-- ## Flowchart -->
 
 ## Get started (Linux)
-To get started, create a virtual environment and necessary Python libraries by running:
+To get started, run the following commands:
 ```
-. prepare.sh
+cd cheminf
+. get_started.sh
 ```
-The project uses C++, Python3 and its libraries `PyYAML` and `graphviz`.
 
+The `get_started.sh` script will install a Python virtual environment `.env`, activate it, and install the necessary Python libraries (`PyYAML` and `graphviz`). It will also export the current directory to the `$PATH` variable.
 
 ## Usage example
 
@@ -29,12 +30,12 @@ The project provides numerous instances for different partial orders:
 To run the first example and plot the results, simply run:
 
 ```
-python3 hasse/hasse.py -t gcd1
+cheminf -t gcd1
 ```
 
 If you wish to use the precalculated data for the provided examples, simply include the -r flag:
 ```
-python3 hasse/hasse.py -rt gcd1
+cheminf -rt gcd1
 ```
 
 To run custom examples, add data to the `input.yaml`:
