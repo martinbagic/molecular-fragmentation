@@ -80,14 +80,8 @@ This limit is important for tractability reasons.
 
 As long as at least one solution is a connected subgraph, this limit is benign and will simply result in a smaller output lattice. However, if there are many disconnected subgraph solutions, it could happen that no connected subgraph solution is returned, which further causes the issues described above.
 
-<sub>
-<sup>
-
 Note that an additional condition (`i < max_cliques`) has been added to `mcs.cpp` for-loop in line 249.
 This is because it is possible that `n` is greater than `max_cliques`, but letting `i` grow bigger than `max_cliques` leads to a _Segmentation fault (core dumped)_ error.
-
-</sup>
-</sub>
 
 ## Potential improvements
 
@@ -119,8 +113,7 @@ This is because it is possible that `n` is greater than `max_cliques`, but letti
 ## Resources
 
 - [Christoph Flamm](https://ufind.univie.ac.at/en/person.html?id=17324)'s presentations: [1](https://www.tbi.univie.ac.at/~xtof/Leere/269019/exercise01.pdf), [2](https://www.tbi.univie.ac.at/~xtof/Leere/270038/ue02.pdf)
-- maximum common subgraph algorithm ([mcs](https://tripod.nih.gov/?p=189))
-- maximum clique algorithm ([cliquer](https://users.aalto.fi/~pat/cliquer/cliquer.pdf))
+- mcs+cliquer code (https://github.com/openbabel/contributed/tree/master/c%2B%2B/mcs-cliquer))
 - Peter Lind's [publication](https://www.ncbi.nlm.nih.gov/pubmed/24437465) "Construction and use of fragment-augmented molecular Hasse diagrams" and [publication repo](https://github.com/peter-lind/hasse-manager)
 
 ## Meta
