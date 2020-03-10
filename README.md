@@ -104,6 +104,7 @@ This is because it is possible that `n` is greater than `max_cliques`, but letti
 ## Design choices
 
 - Fragments with less than 7 atoms are ignored (defined in `Canonicalizer.min_length = 7`)
+- Using maximum common induced subgraph variant of `mcs` (`mcis`)
 
 ## Definitions
 
