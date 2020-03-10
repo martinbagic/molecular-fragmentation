@@ -113,7 +113,7 @@ This is because it is possible that `n` is greater than `max_cliques`, but letti
 ## Resources
 
 - [Christoph Flamm](https://ufind.univie.ac.at/en/person.html?id=17324)'s presentations: [1](https://www.tbi.univie.ac.at/~xtof/Leere/269019/exercise01.pdf), [2](https://www.tbi.univie.ac.at/~xtof/Leere/270038/ue02.pdf)
-- mcs+cliquer code (https://github.com/openbabel/contributed/tree/master/c%2B%2B/mcs-cliquer))
+- mcs+cliquer code (https://github.com/openbabel/contributed/tree/master/c%2B%2B/mcs-cliquer)
 - Peter Lind's [publication](https://www.ncbi.nlm.nih.gov/pubmed/24437465) "Construction and use of fragment-augmented molecular Hasse diagrams" and [publication repo](https://github.com/peter-lind/hasse-manager)
 
 ## Meta
